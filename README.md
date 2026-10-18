@@ -28,7 +28,7 @@
 | | |
 |---|---|
 | 🔍 **Lagi fokus** | Reverse engineering Android (jadx, apktool, smali) & analisis API |
-| 🤖 **Lagi bangun** | [KeyBotz](https://github.com/habNoir/KeyBotz) — WhatsApp bot ringan berbasis Node.js |
+| 🤖 **Lagi bangun** | [marimo](https://github.com/habNoir/marimo) — WhatsApp bot ringan berbasis Node.js |
 | 🛠 **Perkakas andalan** | Node.js · JavaScript · PHP · jadx · Ghidra |
 | 🎯 **Prinsip** | Stdlib dulu, dependensi seperlunya, kode sekecil mungkin |
 
