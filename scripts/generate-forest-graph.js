@@ -208,14 +208,14 @@ async function main() {
     </text>
 
     <!-- Legend Scale -->
-    <g transform="translate(560, 8)" font-family="'JetBrains Mono', monospace" font-size="9.5" fill="#86efac">
-      <text x="-32" y="10" text-anchor="end" fill="#6ee7b7">Dormant</text>
+    <g transform="translate(570, 8)" font-family="'JetBrains Mono', monospace" font-size="9.5" fill="#86efac">
+      <text x="-14" y="10" text-anchor="end" fill="#6ee7b7">Dormant</text>
       ${renderTree(0, 0, 0)}
-      ${renderTree(1, 24, 0)}
-      ${renderTree(2, 48, 0)}
-      ${renderTree(3, 72, 0)}
-      ${renderTree(4, 96, 0)}
-      <text x="124" y="10" fill="#6ee7b7">Elder Pine</text>
+      ${renderTree(1, 22, 0)}
+      ${renderTree(2, 44, 0)}
+      ${renderTree(3, 66, 0)}
+      ${renderTree(4, 88, 0)}
+      <text x="110" y="10" fill="#6ee7b7">Elder Pine</text>
     </g>
   </g>
 </svg>`;

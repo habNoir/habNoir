@@ -40,7 +40,7 @@
 
   <!-- Title & Subtitle -->
   <text x="20" y="58" font-size="12" font-weight="bold" fill="#4ade80" letter-spacing="1">FOREST TELEMETRY &amp; METRICS</text>
-  <text x="20" y="74" font-size="9" fill="#86efac" opacity="0.8">Real-time GitHub developer velocity</text>
+  <text x="20" y="72" font-size="9" fill="#86efac" opacity="0.8">Kernel &amp; GitHub workspace telemetry</text>
 
   <!-- 2x2 Metric Cards Grid -->
   <g transform="translate(20, 88)">
@@ -107,5 +107,6 @@
     <text x="16" y="17" font-size="9" fill="#86efac">
       HOST: <tspan fill="#4ade80" font-weight="bold">ARCH LINUX</tspan> | SERVER: <tspan fill="#f0fdf4">APACHE 2.4</tspan>
     </text>
+    <text x="344" y="17" text-anchor="end" font-size="9" fill="#4ade80" font-weight="bold">ONLINE // zen</text>
   </g>
 </svg>

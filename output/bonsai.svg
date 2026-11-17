@@ -24,12 +24,26 @@
   <rect width="384" height="320" rx="12" fill="url(#bonsai-halo)" />
   <rect x="1.5" y="1.5" width="381" height="317" rx="10.5" fill="none" stroke="#22c55e" stroke-width="0.7" stroke-opacity="0.25" />
 
+  <!-- Terminal Top Bar (GitHub Dark Unified) -->
+  <path d="M 0 12 Q 0 0 12 0 L 372 0 Q 384 0 384 12 L 384 32 L 0 32 Z" fill="#161b22" />
+  <line x1="0" y1="32" x2="384" y2="32" stroke="#21262d" stroke-width="1" />
+
+  <!-- Window Dots -->
+  <circle cx="18" cy="16" r="4.5" fill="#15803d" />
+  <circle cx="32" cy="16" r="4.5" fill="#22c55e" />
+  <circle cx="46" cy="16" r="4.5" fill="#4ade80" />
+
+  <!-- Terminal Title -->
+  <text x="50%" y="20" text-anchor="middle" font-size="10.5" fill="#86efac" letter-spacing="0.5">
+    habnoir@arch-forest: ~ (bonsai)
+  </text>
+
   <!-- Subtitle Header -->
-  <text x="24" y="32" font-size="11" fill="#4ade80" font-weight="bold" letter-spacing="1">GIT-BONSAI // NATURE COMMIT GROVE</text>
-  <text x="24" y="48" font-size="9" fill="#86efac">Procedural forest growth driven by git contributions</text>
+  <text x="20" y="58" font-size="12" font-weight="bold" fill="#4ade80" letter-spacing="1">LIVING GIT-BONSAI // ARCH-FOREST</text>
+  <text x="20" y="72" font-size="9" fill="#86efac" opacity="0.8">Stepped pine architecture synced with git</text>
 
   <!-- Bonsai Container / Graphic Group -->
-  <g transform="translate(68, 45)">
+  <g transform="translate(68, 56)">
     <!-- Ambient Green Forest Halo -->
     <circle cx="120" cy="110" r="75" fill="#22c55e" opacity="0.1" filter="url(#neon-nature-glow)" />
 
@@ -108,11 +122,12 @@
   </g>
 
   <!-- Bottom Legend / Status -->
-  <g transform="translate(24, 270)">
-    <line x1="0" y1="0" x2="336" y2="0" stroke="#21262d" stroke-width="1" />
-    <circle cx="6" cy="18" r="3.5" fill="#4ade80" />
-    <text x="18" y="21" font-size="9.5" fill="#86efac">
+  <g transform="translate(20, 290)">
+    <line x1="0" y1="0" x2="344" y2="0" stroke="#21262d" stroke-width="1" />
+    <circle cx="5" cy="14" r="3.5" fill="#4ade80" filter="url(#neon-nature-glow)" />
+    <text x="16" y="17" font-size="9" fill="#86efac">
       BIOME: <tspan fill="#4ade80" font-weight="bold">ARCH-FOREST</tspan> | PHOTOSYNTHESIS: <tspan fill="#f0fdf4">ACTIVE</tspan>
     </text>
+    <text x="344" y="17" text-anchor="end" font-size="9" fill="#4ade80" font-weight="bold">EVERGREEN PINE</text>
   </g>
 </svg>

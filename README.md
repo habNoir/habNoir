@@ -8,16 +8,16 @@
 
 ### System Specs
 
-```ansi
- [32m       /\ [0m              [1;32mhabNoir [0m@ [1;32marchbox [0m
- [32m      /  \ [0m            -------------------
- [32m     /\   \ [0m            [1;32mOS [0m: Arch Linux x86_64
- [32m    /      \ [0m           [1;32mKernel [0m: 6.12.x-zen / hardened
- [32m   /   ,,   \ [0m          [1;32mShell [0m: zsh 5.9
- [32m  /   |  |  -\ [0m         [1;32mWeb Server Engine [0m: Apache/2.4 (event MPM + HTTP/2)
- [32m /_-''    ''-_\ [0m        [1;32mStack [0m: C++20 | Python 3.12 | Node.js | PHP 8.3
-                        [1;32mSpecialization [0m: Android Modding (KernelSU/Magisk) & Reverse Engineering
-                        [1;32mStatus [0m: Active development
+```text
+       /\                  habNoir@archbox
+      /  \                -------------------
+     /\   \               OS: Arch Linux x86_64
+    /      \              Kernel: 6.12.x-zen / hardened
+   /   ,,   \             Shell: zsh 5.9
+  /   |  |  -\            Web Server Engine: Apache/2.4 (event MPM + HTTP/2)
+ /_-''    ''-_\           Stack: C++20 | Python 3.12 | Node.js | PHP 8.3
+                          Specialization: Android Modding (KernelSU/Magisk) & Reverse Engineering
+                          Status: Active development
 ```
 
 ---

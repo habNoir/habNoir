@@ -43,12 +43,12 @@
 
   <!-- Terminal Command Header -->
   <text x="76" y="22" font-size="11" font-weight="600" fill="#a7f3d0">
-    habnoir@arch-forest:~$ <tspan fill="#4ade80">tree</tspan> <tspan fill="#86efac">--isometric-3d</tspan> <tspan fill="#6ee7b7">--biome=evergreen --close-up</tspan>
+    habnoir@arch-forest:~$ <tspan fill="#4ade80">tree</tspan> <tspan fill="#86efac">--isometric-3d</tspan> <tspan fill="#6ee7b7">--biome=evergreen</tspan>
   </text>
 
   <!-- Telemetry Meta -->
   <text x="935" y="22" text-anchor="end" font-size="10" fill="#6ee7b7">
-    🌿 CLOSE-UP 3D GROVE // <tspan fill="#f0fdf4" font-weight="bold">60 COMMITS PLANTED</tspan>
+    🌿 3D VOXEL GROVE // <tspan fill="#f0fdf4" font-weight="bold">60 COMMITS PLANTED</tspan>
   </text>
 
   <!-- 3D Voxel Blocks & Trees -->

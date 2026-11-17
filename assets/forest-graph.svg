@@ -1295,59 +1295,59 @@
     </text>
 
     <!-- Legend Scale -->
-    <g transform="translate(560, 8)" font-family="'JetBrains Mono', monospace" font-size="9.5" fill="#86efac">
-      <text x="-32" y="10" text-anchor="end" fill="#6ee7b7">Dormant</text>
+    <g transform="translate(570, 8)" font-family="'JetBrains Mono', monospace" font-size="9.5" fill="#86efac">
+      <text x="-14" y="10" text-anchor="end" fill="#6ee7b7">Dormant</text>
       
       <rect x="0" y="2" width="11" height="11" rx="2" fill="#161b22" stroke="#21262d" stroke-width="0.8"/>
       <circle cx="5.5" cy="7.5" r="1" fill="#165b38" opacity="0.6"/>
     
       
-      <rect x="24" y="2" width="11" height="11" rx="2" fill="#0d261a" stroke="#165b38" stroke-width="0.8"/>
+      <rect x="22" y="2" width="11" height="11" rx="2" fill="#0d261a" stroke="#165b38" stroke-width="0.8"/>
       <!-- trunk -->
-      <rect x="28.5" y="8" width="2" height="4" fill="#713f12"/>
+      <rect x="26.5" y="8" width="2" height="4" fill="#713f12"/>
       <!-- Tier 1 Pine Canopy -->
-      <polygon points="29.5,3 26,8 33,8" fill="#166534"/>
-      <polygon points="29.5,3 27,6.5 32,6.5" fill="#22c55e"/>
-      <circle cx="29.5" cy="3.5" r="0.8" fill="#86efac"/>
+      <polygon points="27.5,3 24,8 31,8" fill="#166534"/>
+      <polygon points="27.5,3 25,6.5 30,6.5" fill="#22c55e"/>
+      <circle cx="27.5" cy="3.5" r="0.8" fill="#86efac"/>
     
       
-      <rect x="48" y="2" width="11" height="11" rx="2" fill="#0f3322" stroke="#22c55e" stroke-width="0.8" stroke-opacity="0.8"/>
+      <rect x="44" y="2" width="11" height="11" rx="2" fill="#0f3322" stroke="#22c55e" stroke-width="0.8" stroke-opacity="0.8"/>
       <!-- trunk -->
-      <rect x="52.5" y="8" width="2" height="4" fill="#713f12"/>
+      <rect x="48.5" y="8" width="2" height="4" fill="#713f12"/>
       <!-- Lower Tier -->
-      <polygon points="53.5,5 49.5,9 57.5,9" fill="#14532d"/>
+      <polygon points="49.5,5 45.5,9 53.5,9" fill="#14532d"/>
       <!-- Upper Tier -->
-      <polygon points="53.5,2 50.5,6 56.5,6" fill="#22c55e"/>
-      <circle cx="53.5" cy="2.5" r="0.9" fill="#86efac"/>
+      <polygon points="49.5,2 46.5,6 52.5,6" fill="#22c55e"/>
+      <circle cx="49.5" cy="2.5" r="0.9" fill="#86efac"/>
     
       
-      <rect x="72" y="2" width="11" height="11" rx="2" fill="#134e2a" stroke="#4ade80" stroke-width="0.9"/>
+      <rect x="66" y="2" width="11" height="11" rx="2" fill="#134e2a" stroke="#4ade80" stroke-width="0.9"/>
       <!-- trunk -->
-      <rect x="76.5" y="8" width="2" height="4.5" fill="#713f12"/>
+      <rect x="70.5" y="8" width="2" height="4.5" fill="#713f12"/>
       <!-- Tier 1: Lower -->
-      <polygon points="77.5,6 72.5,9.5 82.5,9.5" fill="#052e16"/>
-      <polygon points="77.5,6 73.5,9 81.5,9" fill="#15803d"/>
+      <polygon points="71.5,6 66.5,9.5 76.5,9.5" fill="#052e16"/>
+      <polygon points="71.5,6 67.5,9 75.5,9" fill="#15803d"/>
       <!-- Tier 2: Mid -->
-      <polygon points="77.5,3.5 74,7 81,7" fill="#16a34a"/>
+      <polygon points="71.5,3.5 68,7 75,7" fill="#16a34a"/>
       <!-- Tier 3: Top -->
-      <polygon points="77.5,1 75,4.5 80,4.5" fill="#22c55e"/>
-      <circle cx="77.5" cy="1.5" r="1" fill="#86efac"/>
+      <polygon points="71.5,1 69,4.5 74,4.5" fill="#22c55e"/>
+      <circle cx="71.5" cy="1.5" r="1" fill="#86efac"/>
     
       
-    <rect x="96" y="2" width="11" height="11" rx="2" fill="#14532d" stroke="#86efac" stroke-width="1.1"/>
+    <rect x="88" y="2" width="11" height="11" rx="2" fill="#14532d" stroke="#86efac" stroke-width="1.1"/>
     <!-- trunk -->
-    <rect x="100.5" y="8" width="2" height="4.5" fill="#713f12"/>
+    <rect x="92.5" y="8" width="2" height="4.5" fill="#713f12"/>
     <!-- Tier 1: Grand Base -->
-    <polygon points="101.5,6.5 96.5,9.5 106.5,9.5" fill="#052e16"/>
+    <polygon points="93.5,6.5 88.5,9.5 98.5,9.5" fill="#052e16"/>
     <!-- Tier 2: Lower Mid -->
-    <polygon points="101.5,4.5 97.5,7.5 105.5,7.5" fill="#15803d"/>
+    <polygon points="93.5,4.5 89.5,7.5 97.5,7.5" fill="#15803d"/>
     <!-- Tier 3: Upper Mid -->
-    <polygon points="101.5,2.5 98.5,5.5 104.5,5.5" fill="#22c55e"/>
+    <polygon points="93.5,2.5 90.5,5.5 96.5,5.5" fill="#22c55e"/>
     <!-- Tier 4: Crowning Spire -->
-    <polygon points="101.5,0.5 99.5,3.5 103.5,3.5" fill="#4ade80"/>
-    <circle cx="101.5" cy="1" r="1.1" fill="#bbf7d0"/>
+    <polygon points="93.5,0.5 91.5,3.5 95.5,3.5" fill="#4ade80"/>
+    <circle cx="93.5" cy="1" r="1.1" fill="#bbf7d0"/>
   
-      <text x="124" y="10" fill="#6ee7b7">Elder Pine</text>
+      <text x="110" y="10" fill="#6ee7b7">Elder Pine</text>
     </g>
   </g>
 </svg>
