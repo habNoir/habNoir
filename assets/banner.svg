@@ -125,7 +125,7 @@
         <tspan fill="#4ade80">🌲</tspan>
         <tspan fill="#86efac"> habnoir@arch-forest</tspan>
         <tspan fill="#6ee7b7">:~$ </tspan>
-        <tspan fill="#a7f3d0">uname -r && tree --forest-mode</tspan>
+        <tspan fill="#a7f3d0">uname -r &amp;&amp; tree --forest-mode</tspan>
       </text>
     </g>
 
