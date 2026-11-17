@@ -31,31 +31,27 @@
 
 ---
 
-### `[0x02]` // THE LIVING GROVE: COMMIT BONSAI & STREAK MATRIX
+### `[0x02]` // THE LIVING GROVE: COMMIT BONSAI & NATURE STATS
 
-> *A procedural pixel-art bonsai that photosynthesizes through GitHub contributions — trunk, foliage, and branches evolve organically.*
+> *A procedural pixel-art bonsai that photosynthesizes through GitHub contributions, paired with 100% bespoke real-time forest telemetry.*
 
 <div align="center">
-<table>
+<table border="0" width="100%">
   <tr>
     <td width="50%" align="center" valign="top">
-      <br/>
-      <b>🌲 LIVING GIT-BONSAI (COMMITS FLORA)</b>
-      <br/><br/>
-      <img src="./output/bonsai.svg" width="360" alt="Git-Bonsai Procedural Tree" />
-      <br/>
-      <sub><i>Grows automatically via daily Git Actions commit analysis</i></sub>
+      <img src="./output/bonsai.svg" width="100%" alt="Git-Bonsai Procedural Tree" />
     </td>
     <td width="50%" align="center" valign="top">
-      <br/>
-      <b>🔥 NATURE STREAK &amp; COMMIT MATRIX</b>
-      <br/><br/>
-      <img src="https://streak-stats.demolab.com/?user=habNoir&theme=dark&background=02140A&border=165B38&stroke=22C55E&ring=22C55E&fire=4ADE80&currStreakNum=4ADE80&sideNums=F0FDF4&currStreakLabel=22C55E&sideLabels=86EFAC&dates=6EE7B7" width="390" alt="habNoir Streak Stats" />
-      <br/><br/>
-      <img src="https://github-readme-stats.vercel.app/api?username=habNoir&show_icons=true&include_all_commits=true&count_private=true&theme=dark&bg_color=02140A&title_color=4ADE80&icon_color=22C55E&text_color=F0FDF4&border_color=165B38&hide_border=false" width="390" alt="habNoir Total Stats" />
+      <img src="./assets/nature-stats.svg" width="100%" alt="habNoir Custom Nature Stats" />
     </td>
   </tr>
 </table>
+
+<br/>
+
+<!-- Real-time Nature Streak Matrix -->
+<img src="https://streak-stats.demolab.com/?user=habNoir&theme=dark&background=02140A&border=165B38&stroke=22C55E&ring=22C55E&fire=4ADE80&currStreakNum=4ADE80&sideNums=F0FDF4&currStreakLabel=22C55E&sideLabels=86EFAC&dates=6EE7B7" width="100%" alt="habNoir Streak Stats" />
+
 </div>
 
 ---
@@ -93,7 +89,7 @@
 <!-- REPOS-LIST:START -->
 | 📦 Project / Repository | 📝 Focus / Description | ⚡ Primary Tech | ⭐ Stars | 🕒 Last Push |
 | :--- | :--- | :---: | :---: | :---: |
-| **[`habNoir / vibe-motion-lyrics`](https://github.com/habNoir/vibe-motion-lyrics)** | 16:9 VS Code kinetic typography lyrics video studio with auto-sync AI backend (React JS + Vite) | `HTML` | `—` | `21m ago` |
+| **[`habNoir / vibe-motion-lyrics`](https://github.com/habNoir/vibe-motion-lyrics)** | 16:9 VS Code kinetic typography lyrics video studio with auto-sync AI backend (React JS + Vite) | `HTML` | `—` | `25m ago` |
 | **[`habNoir / marimo`](https://github.com/habNoir/marimo)** | *No description provided* | 🟨 JavaScript | `★ 2` | `1mo ago` |
 | **[`habNoir / NotAFK-HAB`](https://github.com/habNoir/NotAFK-HAB)** | *No description provided* | 🔵 C++ | `—` | `5mo ago` |
 | **[`habNoir / habNoir.github.io`](https://github.com/habNoir/habNoir.github.io)** | *No description provided* | `HTML` | `—` | `9mo ago` |

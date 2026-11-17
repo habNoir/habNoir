@@ -1,4 +1,4 @@
-name: Update Forest Graph & Repos in README
+name: Update Forest Graph, Stats & Repos
 
 on:
   schedule:
@@ -29,6 +29,12 @@ jobs:
           GH_USERNAME: ${{ github.repository_owner }}
         run: node scripts/generate-forest-graph.js
 
+      - name: Generate Full Custom Nature Stats
+        env:
+          GH_USERNAME: ${{ github.repository_owner }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: node scripts/generate-nature-stats.js
+
       - name: Run Repository Auto-Updater Script
         env:
           GH_USERNAME: ${{ github.repository_owner }}
@@ -38,5 +44,5 @@ jobs:
       - name: Commit & Push Changes
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          commit_message: "chore(nature): auto-regenerate forest tree graph & update repo showcase [skip ci]"
-          file_pattern: "README.md assets/forest-graph.svg"
+          commit_message: "chore(nature): auto-regenerate forest ecosystem assets [skip ci]"
+          file_pattern: "README.md assets/forest-graph.svg assets/nature-stats.svg"

@@ -30,12 +30,6 @@
       <stop offset="50%" stop-color="#22c55e" />
       <stop offset="100%" stop-color="#14532d" />
     </linearGradient>
-
-    <!-- Arch Forest Cyan-Green Gradient -->
-    <linearGradient id="arch-forest-grad" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#10b981" />
-      <stop offset="100%" stop-color="#34d399" />
-    </linearGradient>
   </defs>
 
   <!-- Deep Nature Forest Background -->
@@ -49,22 +43,22 @@
   <path d="M 0 14 Q 0 0 14 0 L 946 0 Q 960 0 960 14 L 960 38 L 0 38 Z" fill="#02170d" />
   <line x1="0" y1="38" x2="960" y2="38" stroke="#165b38" stroke-width="1.2" />
 
-  <!-- Terminal Window Dots (Nature Forest Palette) -->
+  <!-- Terminal Window Dots -->
   <circle cx="25" cy="19" r="5.5" fill="#15803d" opacity="0.9" />
   <circle cx="43" cy="19" r="5.5" fill="#22c55e" opacity="0.9" />
   <circle cx="61" cy="19" r="5.5" fill="#4ade80" opacity="0.9" />
 
   <!-- Terminal Title -->
-  <text x="50%" y="24" text-anchor="middle" font-family="'JetBrains Mono', 'Fira Code', monospace" font-size="11.5" fill="#6ee7b7" letter-spacing="1">
+  <text x="50%" y="24" text-anchor="middle" font-family="'JetBrains Mono', 'Fira Code', monospace" font-size="11" fill="#6ee7b7" letter-spacing="1">
     habnoir@arch-forest: ~ (zsh/nature-rice) — LINUX EVERGREEN KERNEL
   </text>
 
   <!-- Left: Living Pixel Bonsai Tree & Root System -->
-  <g transform="translate(42, 60)">
+  <g transform="translate(36, 60)">
     <!-- Ambient Green Nature Aura -->
     <circle cx="95" cy="95" r="80" fill="#22c55e" opacity="0.12" filter="url(#emerald-glow)" />
 
-    <!-- Pot (Dark Moss Stone Ceramic) -->
+    <!-- Pot -->
     <polygon points="42,160 148,160 136,180 54,180" fill="#082918" stroke="#165b38" stroke-width="1.5" />
     <rect x="50" y="180" width="90" height="5" rx="2" fill="#03160c" stroke="#22c55e" stroke-width="0.8" stroke-opacity="0.5" />
     <!-- Moss Grass Line -->
@@ -81,27 +75,23 @@
     <!-- Branch Left High -->
     <path d="M 96 75 Q 80 65 68 58" fill="none" stroke="#713f12" stroke-width="3.5" stroke-linecap="round" />
 
-    <!-- Foliage Canopies (Deep Forest Green Tiers) -->
-    <!-- Top Canopy -->
+    <!-- Foliage Canopies -->
     <ellipse cx="112" cy="42" rx="36" ry="18" fill="url(#foliage-grad)" filter="url(#soft-glow)" />
     <ellipse cx="102" cy="36" rx="24" ry="13" fill="#86efac" opacity="0.6" />
     <ellipse cx="126" cy="44" rx="19" ry="11" fill="#14532d" opacity="0.6" />
 
-    <!-- Middle Right Tier -->
     <ellipse cx="140" cy="74" rx="28" ry="15" fill="url(#foliage-grad)" filter="url(#soft-glow)" />
     <ellipse cx="134" cy="70" rx="18" ry="10" fill="#86efac" opacity="0.6" />
     <ellipse cx="150" cy="77" rx="14" ry="8" fill="#14532d" opacity="0.5" />
 
-    <!-- Middle Left Tier -->
     <ellipse cx="58" cy="106" rx="30" ry="16" fill="url(#foliage-grad)" filter="url(#soft-glow)" />
     <ellipse cx="52" cy="102" rx="20" ry="11" fill="#86efac" opacity="0.6" />
     <ellipse cx="68" cy="109" rx="15" ry="9" fill="#14532d" opacity="0.5" />
 
-    <!-- Upper Left Tier -->
     <ellipse cx="65" cy="55" rx="20" ry="12" fill="url(#foliage-grad)" filter="url(#soft-glow)" />
     <ellipse cx="62" cy="52" rx="13" ry="8" fill="#86efac" opacity="0.6" />
 
-    <!-- Pixel Spores / Floating Green Leaves -->
+    <!-- Spores -->
     <rect x="75" y="135" width="4" height="4" fill="#4ade80" opacity="0.9" />
     <rect x="125" y="115" width="3" height="3" fill="#22c55e" opacity="0.8" />
     <rect x="145" y="130" width="3" height="3" fill="#86efac" opacity="0.7" />
@@ -113,114 +103,111 @@
     </text>
   </g>
 
-  <!-- Vertical Forest Vine Divider -->
-  <line x1="262" y1="52" x2="262" y2="258" stroke="#165b38" stroke-width="1.8" />
-  <circle cx="262" cy="155" r="3.5" fill="#4ade80" filter="url(#soft-glow)" />
+  <!-- Vertical Forest Divider -->
+  <line x1="248" y1="52" x2="248" y2="258" stroke="#165b38" stroke-width="1.5" />
+  <circle cx="248" cy="155" r="3.5" fill="#4ade80" filter="url(#soft-glow)" />
 
   <!-- Right Section: Identity, Specs, Linux Evergreen Stack -->
-  <g transform="translate(292, 62)">
-    <!-- Terminal Prompt Line with Tree Command -->
-    <g transform="translate(0, 14)">
-      <text font-family="'JetBrains Mono', monospace" font-size="13" font-weight="600">
-        <tspan fill="#4ade80">🌲</tspan>
-        <tspan fill="#86efac"> habnoir@arch-forest</tspan>
-        <tspan fill="#6ee7b7">:~$ </tspan>
-        <tspan fill="#a7f3d0">uname -r &amp;&amp; tree --forest-mode</tspan>
-      </text>
-    </g>
+  <g transform="translate(276, 62)">
+    <!-- Terminal Prompt Line -->
+    <text x="0" y="16" font-family="'JetBrains Mono', monospace" font-size="12.5" font-weight="600" fill="#a7f3d0">
+      <tspan fill="#4ade80">🌲</tspan> <tspan fill="#86efac">habnoir@arch-forest</tspan><tspan fill="#6ee7b7">:~$</tspan> <tspan fill="#f0fdf4">tree /sys/kernel/contributions</tspan>
+    </text>
 
-    <!-- Main Name Title (Nature Bio Green) -->
+    <!-- Main Name Title -->
     <g transform="translate(0, 48)">
-      <text x="0" y="0" font-family="'JetBrains Mono', system-ui, monospace" font-size="34" font-weight="900" fill="#f0fdf4" letter-spacing="-0.5">
+      <text x="0" y="0" font-family="'JetBrains Mono', monospace" font-size="32" font-weight="900" fill="#f0fdf4" letter-spacing="-0.5">
         habNoir
       </text>
-      <!-- Blinking Terminal Cursor -->
-      <rect x="162" y="-26" width="12" height="30" fill="#4ade80" filter="url(#soft-glow)">
+      <!-- Blinking Terminal Cursor positioned safely -->
+      <rect x="156" y="-24" width="10" height="28" fill="#4ade80" filter="url(#soft-glow)">
         <animate attributeName="opacity" values="1;0;1" dur="1s" repeatCount="indefinite" />
       </rect>
+
+      <!-- Status Pill Aligned Right (No overlap) -->
+      <g transform="translate(545, -20)">
+        <rect width="108" height="24" rx="12" fill="#042113" stroke="#22c55e" stroke-width="1" />
+        <circle cx="14" cy="12" r="3.5" fill="#4ade80" filter="url(#soft-glow)" />
+        <text x="24" y="16" font-family="'JetBrains Mono', monospace" font-size="9.5" font-weight="bold" fill="#4ade80">ONLINE // zen</text>
+      </g>
     </g>
 
-    <!-- Subtitle / Bio -->
-    <text x="0" y="74" font-family="'JetBrains Mono', monospace" font-size="12.5" fill="#86efac" letter-spacing="0.3">
+    <!-- Subtitle / Bio (Proper spacing, fits cleanly) -->
+    <text x="0" y="74" font-family="'JetBrains Mono', monospace" font-size="11.5" fill="#86efac">
       Arch Linux Hacker <tspan fill="#22c55e">|</tspan> Systems &amp; Low-Level <tspan fill="#22c55e">|</tspan> Android Modder <tspan fill="#22c55e">|</tspan> Apache Engine
     </text>
 
-    <!-- Custom Badges / Nature Forest Pill Tags -->
-    <g transform="translate(0, 96)">
-      <!-- Badge: Arch Linux Evergreen -->
+    <!-- Badges Row (Exact horizontal layout, 0 overlaps) -->
+    <g transform="translate(0, 94)">
+      <!-- 1. Arch Linux (w: 104) -->
       <g transform="translate(0, 0)">
-        <rect width="116" height="24" rx="5" fill="#042113" stroke="#22c55e" stroke-width="1.2" />
-        <circle cx="12" cy="12" r="3.5" fill="#4ade80" />
-        <text x="24" y="16" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="600" fill="#a7f3d0">Arch Linux</text>
+        <rect width="104" height="24" rx="4" fill="#042113" stroke="#22c55e" stroke-width="1" />
+        <circle cx="12" cy="12" r="3" fill="#4ade80" />
+        <text x="22" y="16" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="600" fill="#a7f3d0">Arch Linux</text>
       </g>
 
-      <!-- Badge: C++20 -->
-      <g transform="translate(124, 0)">
-        <rect width="66" height="24" rx="5" fill="#042113" stroke="#16a34a" stroke-width="1.2" />
-        <text x="33" y="16" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="600" fill="#86efac">C++20</text>
+      <!-- 2. C++20 (w: 60) -->
+      <g transform="translate(110, 0)">
+        <rect width="60" height="24" rx="4" fill="#042113" stroke="#16a34a" stroke-width="1" />
+        <text x="30" y="16" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="600" fill="#86efac">C++20</text>
       </g>
 
-      <!-- Badge: Python -->
-      <g transform="translate(198, 0)">
-        <rect width="78" height="24" rx="5" fill="#042113" stroke="#15803d" stroke-width="1.2" />
-        <text x="39" y="16" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="600" fill="#86efac">Python</text>
+      <!-- 3. Python (w: 72) -->
+      <g transform="translate(176, 0)">
+        <rect width="72" height="24" rx="4" fill="#042113" stroke="#15803d" stroke-width="1" />
+        <text x="36" y="16" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="600" fill="#86efac">Python</text>
       </g>
 
-      <!-- Badge: Node.js -->
-      <g transform="translate(284, 0)">
-        <rect width="84" height="24" rx="5" fill="#042113" stroke="#22c55e" stroke-width="1.2" />
-        <text x="42" y="16" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="600" fill="#4ade80">Node.js</text>
+      <!-- 4. Node.js (w: 78) -->
+      <g transform="translate(254, 0)">
+        <rect width="78" height="24" rx="4" fill="#042113" stroke="#22c55e" stroke-width="1" />
+        <text x="39" y="16" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="600" fill="#4ade80">Node.js</text>
       </g>
 
-      <!-- Badge: PHP -->
-      <g transform="translate(376, 0)">
-        <rect width="60" height="24" rx="5" fill="#042113" stroke="#16a34a" stroke-width="1.2" />
-        <text x="30" y="16" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="600" fill="#86efac">PHP</text>
+      <!-- 5. PHP (w: 52) -->
+      <g transform="translate(338, 0)">
+        <rect width="52" height="24" rx="4" fill="#042113" stroke="#16a34a" stroke-width="1" />
+        <text x="26" y="16" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="600" fill="#86efac">PHP</text>
       </g>
 
-      <!-- Badge: Apache -->
-      <g transform="translate(444, 0)">
-        <rect width="90" height="24" rx="5" fill="#042113" stroke="#22c55e" stroke-width="1.2" />
-        <text x="45" y="16" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="600" fill="#4ade80">Apache 2.4</text>
+      <!-- 6. Apache (w: 86) -->
+      <g transform="translate(396, 0)">
+        <rect width="86" height="24" rx="4" fill="#042113" stroke="#22c55e" stroke-width="1" />
+        <text x="43" y="16" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="600" fill="#4ade80">Apache 2.4</text>
       </g>
 
-      <!-- Badge: Android Lab -->
-      <g transform="translate(542, 0)">
-        <rect width="98" height="24" rx="5" fill="#042113" stroke="#4ade80" stroke-width="1.2" />
-        <text x="49" y="16" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="600" fill="#86efac">Android Mod</text>
+      <!-- 7. Android Mod (w: 102) -->
+      <g transform="translate(488, 0)">
+        <rect width="102" height="24" rx="4" fill="#042113" stroke="#4ade80" stroke-width="1" />
+        <text x="51" y="16" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="600" fill="#86efac">Android Mod</text>
       </g>
     </g>
 
-    <!-- Terminal Status Info Row -->
-    <g transform="translate(0, 142)">
-      <rect width="640" height="38" rx="6" fill="#031a0e" stroke="#165b38" stroke-width="1.2" />
+    <!-- Telemetry Row (Calibrated Boundaries - ZERO Collisions) -->
+    <g transform="translate(0, 136)">
+      <rect width="655" height="42" rx="6" fill="#031a0e" stroke="#165b38" stroke-width="1.2" />
       
-      <!-- Metric 1: OS / Kernel -->
-      <text x="16" y="23" font-family="'JetBrains Mono', monospace" font-size="11" fill="#6ee7b7">
-        KERNEL: <tspan fill="#f0fdf4" font-weight="600">6.12-zen (rolling)</tspan>
+      <!-- Section 1: OS / Kernel (x: 14, width ~180) -->
+      <text x="14" y="26" font-family="'JetBrains Mono', monospace" font-size="10.5" fill="#6ee7b7">
+        OS: <tspan fill="#f0fdf4" font-weight="600">Arch 6.12-zen</tspan>
       </text>
 
-      <line x1="180" y1="8" x2="180" y2="30" stroke="#165b38" stroke-width="1" />
+      <line x1="185" y1="9" x2="185" y2="33" stroke="#165b38" stroke-width="1" />
 
-      <!-- Metric 2: Server Engine -->
-      <text x="195" y="23" font-family="'JetBrains Mono', monospace" font-size="11" fill="#6ee7b7">
-        HTTPD: <tspan fill="#f0fdf4" font-weight="600">apache2 / event MPM</tspan>
+      <!-- Section 2: Server Engine (x: 198, width ~200) -->
+      <text x="198" y="26" font-family="'JetBrains Mono', monospace" font-size="10.5" fill="#6ee7b7">
+        HTTPD: <tspan fill="#f0fdf4" font-weight="600">Apache/2.4 event</tspan>
       </text>
 
-      <line x1="375" y1="8" x2="375" y2="30" stroke="#165b38" stroke-width="1" />
+      <line x1="395" y1="9" x2="395" y2="33" stroke="#165b38" stroke-width="1" />
 
-      <!-- Metric 3: Focus -->
-      <text x="390" y="23" font-family="'JetBrains Mono', monospace" font-size="11" fill="#6ee7b7">
-        LAB: <tspan fill="#f0fdf4" font-weight="600">KernelSU &amp; Binary Reversing</tspan>
+      <!-- Section 3: Lab Focus (x: 408, width ~240) -->
+      <text x="408" y="26" font-family="'JetBrains Mono', monospace" font-size="10.5" fill="#6ee7b7">
+        MOD: <tspan fill="#f0fdf4" font-weight="600">KernelSU / Reversing</tspan>
       </text>
 
-      <line x1="565" y1="8" x2="565" y2="30" stroke="#165b38" stroke-width="1" />
-
-      <!-- Pulse Dot & Status -->
-      <circle cx="580" cy="19" r="4.5" fill="#4ade80" filter="url(#soft-glow)" />
-      <text x="592" y="23" font-family="'JetBrains Mono', monospace" font-size="10.5" font-weight="bold" fill="#4ade80">
-        ALIVE
-      </text>
+      <!-- Status dot inside telemetry box -->
+      <circle cx="632" cy="21" r="3.5" fill="#4ade80" filter="url(#soft-glow)" />
     </g>
   </g>
 </svg>
