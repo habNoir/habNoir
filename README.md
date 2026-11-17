@@ -28,7 +28,7 @@
 <table border="0" width="100%">
   <tr>
     <td width="50%" align="center" valign="top">
-      <img src="./output/bonsai.svg" width="100%" alt="Git-Bonsai Procedural Tree" />
+      <img src="./output/bonsai.svg" width="100%" alt="Git-Bonsai" />
     </td>
     <td width="50%" align="center" valign="top">
       <img src="./assets/nature-stats.svg" width="100%" alt="habNoir Custom Nature Stats" />
