@@ -3,24 +3,30 @@
     <style>
       text { font-family: 'JetBrains Mono', 'Fira Code', 'Courier New', monospace; }
     </style>
+    <!-- Seamless Canvas Match Gradient -->
     <linearGradient id="card-grad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#02140a" />
-      <stop offset="50%" stop-color="#052416" />
-      <stop offset="100%" stop-color="#021208" />
+      <stop offset="0%" stop-color="#0d1117" />
+      <stop offset="50%" stop-color="#0e1f18" />
+      <stop offset="100%" stop-color="#0d1117" />
     </linearGradient>
+    <radialGradient id="stat-glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#22c55e" stop-opacity="0.12" />
+      <stop offset="100%" stop-color="#0d1117" stop-opacity="0" />
+    </radialGradient>
     <filter id="emerald-glow" x="-20%" y="-20%" width="140%" height="140%">
       <feGaussianBlur stdDeviation="3" result="blur" />
       <feComposite in="SourceGraphic" in2="blur" operator="over" />
     </filter>
   </defs>
 
-  <!-- Background Frame -->
-  <rect width="384" height="320" rx="12" fill="url(#card-grad)" stroke="#165b38" stroke-width="1.4" />
-  <rect x="2" y="2" width="380" height="316" rx="10" fill="none" stroke="#22c55e" stroke-width="0.8" stroke-opacity="0.2" />
+  <!-- Seamless Background Frame (#0D1117) -->
+  <rect width="384" height="320" rx="12" fill="url(#card-grad)" stroke="#165b38" stroke-width="1.2" />
+  <rect width="384" height="320" rx="12" fill="url(#stat-glow)" />
+  <rect x="1.5" y="1.5" width="381" height="317" rx="10.5" fill="none" stroke="#22c55e" stroke-width="0.7" stroke-opacity="0.25" />
 
-  <!-- Terminal Top Bar -->
-  <path d="M 0 12 Q 0 0 12 0 L 372 0 Q 384 0 384 12 L 384 32 L 0 32 Z" fill="#03190e" />
-  <line x1="0" y1="32" x2="384" y2="32" stroke="#165b38" stroke-width="1" />
+  <!-- Terminal Top Bar (GitHub Dark Unified) -->
+  <path d="M 0 12 Q 0 0 12 0 L 372 0 Q 384 0 384 12 L 384 32 L 0 32 Z" fill="#161b22" />
+  <line x1="0" y1="32" x2="384" y2="32" stroke="#21262d" stroke-width="1" />
 
   <!-- Window Dots -->
   <circle cx="18" cy="16" r="4.5" fill="#15803d" />
@@ -40,28 +46,28 @@
   <g transform="translate(20, 88)">
     <!-- Card 1: Contributions / Trees -->
     <g transform="translate(0, 0)">
-      <rect width="166" height="54" rx="6" fill="#042113" stroke="#165b38" stroke-width="1" />
+      <rect width="166" height="54" rx="6" fill="#161b22" stroke="#165b38" stroke-width="1" />
       <text x="12" y="20" font-size="9" fill="#86efac">🌲 CONTRIBUTIONS</text>
-      <text x="12" y="42" font-size="17" font-weight="900" fill="#f0fdf4">44 <tspan font-size="10" font-weight="normal" fill="#4ade80">trees</tspan></text>
+      <text x="12" y="42" font-size="17" font-weight="900" fill="#f0fdf4">60 <tspan font-size="10" font-weight="normal" fill="#4ade80">trees</tspan></text>
     </g>
 
     <!-- Card 2: Public Repos -->
     <g transform="translate(178, 0)">
-      <rect width="166" height="54" rx="6" fill="#042113" stroke="#165b38" stroke-width="1" />
+      <rect width="166" height="54" rx="6" fill="#161b22" stroke="#165b38" stroke-width="1" />
       <text x="12" y="20" font-size="9" fill="#86efac">📦 PUBLIC REPOS</text>
       <text x="12" y="42" font-size="17" font-weight="900" fill="#f0fdf4">8 <tspan font-size="10" font-weight="normal" fill="#4ade80">active</tspan></text>
     </g>
 
     <!-- Card 3: Stars Earned -->
     <g transform="translate(0, 62)">
-      <rect width="166" height="54" rx="6" fill="#042113" stroke="#165b38" stroke-width="1" />
+      <rect width="166" height="54" rx="6" fill="#161b22" stroke="#165b38" stroke-width="1" />
       <text x="12" y="20" font-size="9" fill="#86efac">⭐ TOTAL STARS</text>
       <text x="12" y="42" font-size="17" font-weight="900" fill="#f0fdf4">4 <tspan font-size="10" font-weight="normal" fill="#4ade80">stars</tspan></text>
     </g>
 
     <!-- Card 4: Forks -->
     <g transform="translate(178, 62)">
-      <rect width="166" height="54" rx="6" fill="#042113" stroke="#165b38" stroke-width="1" />
+      <rect width="166" height="54" rx="6" fill="#161b22" stroke="#165b38" stroke-width="1" />
       <text x="12" y="20" font-size="9" fill="#86efac">🌿 FORKS / REPO</text>
       <text x="12" y="42" font-size="17" font-weight="900" fill="#f0fdf4">1 <tspan font-size="10" font-weight="normal" fill="#4ade80">forks</tspan></text>
     </g>
@@ -72,7 +78,7 @@
     <text x="0" y="0" font-size="9" font-weight="bold" fill="#86efac">STACK SPECTRUM (ACTIVE REPOS)</text>
     
     <!-- Multi-segmented Progress Bar -->
-    <rect x="0" y="10" width="344" height="8" rx="4" fill="#042113" />
+    <rect x="0" y="10" width="344" height="8" rx="4" fill="#161b22" />
     <rect x="0" y="10" width="130" height="8" rx="4" fill="#22c55e" />
     <rect x="132" y="10" width="90" height="8" rx="2" fill="#16a34a" />
     <rect x="224" y="10" width="60" height="8" rx="2" fill="#38bdf8" />
@@ -96,7 +102,7 @@
 
   <!-- Bottom Arch Linux Status Footer -->
   <g transform="translate(20, 290)">
-    <line x1="0" y1="0" x2="344" y2="0" stroke="#0e3d26" stroke-width="1" />
+    <line x1="0" y1="0" x2="344" y2="0" stroke="#21262d" stroke-width="1" />
     <circle cx="5" cy="14" r="3.5" fill="#4ade80" filter="url(#emerald-glow)" />
     <text x="16" y="17" font-size="9" fill="#86efac">
       HOST: <tspan fill="#4ade80" font-weight="bold">ARCH LINUX</tspan> | SERVER: <tspan fill="#f0fdf4">APACHE 2.4</tspan>

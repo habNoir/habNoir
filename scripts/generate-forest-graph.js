@@ -1,8 +1,7 @@
 /**
  * Forest Contribution Graph Generator for habNoir
+ * Seamless Canvas Match (#0D1117 + Emerald Ambient Glow)
  * Renders each contribution day as a consistent Stepped Pixel Evergreen Pine Tree
- * Full Nature Theme (Deep Forest Green) + Arch Linux Integration
- * 100% Unified Botanical Morphology (1-tier -> 2-tier -> 3-tier -> 4-tier Pine)
  */
 
 const fs = require('fs');
@@ -20,18 +19,18 @@ async function fetchContributions() {
 
 function renderTree(level, x, y) {
   // Cell bounding box: 11x11, placed inside a 15x15 week/day slot
-  // Level 0: Dormant moss / tiny seedling sprout
+  // Level 0: Dormant moss tile on #0D1117 canvas
   if (level === 0) {
     return `
-      <rect x="${x}" y="${y + 2}" width="11" height="11" rx="2" fill="#082316" stroke="#0e3d26" stroke-width="0.6"/>
-      <circle cx="${x + 5.5}" cy="${y + 7.5}" r="1" fill="#14532d" opacity="0.6"/>
+      <rect x="${x}" y="${y + 2}" width="11" height="11" rx="2" fill="#161b22" stroke="#21262d" stroke-width="0.8"/>
+      <circle cx="${x + 5.5}" cy="${y + 7.5}" r="1" fill="#165b38" opacity="0.6"/>
     `;
   }
 
   // Level 1: Sapling (1-Tier Stepped Pine)
   if (level === 1) {
     return `
-      <rect x="${x}" y="${y + 2}" width="11" height="11" rx="2" fill="#0b301e" stroke="#165b38" stroke-width="0.7"/>
+      <rect x="${x}" y="${y + 2}" width="11" height="11" rx="2" fill="#0d261a" stroke="#165b38" stroke-width="0.8"/>
       <!-- trunk -->
       <rect x="${x + 4.5}" y="${y + 8}" width="2" height="4" fill="#713f12"/>
       <!-- Tier 1 Pine Canopy -->
@@ -44,7 +43,7 @@ function renderTree(level, x, y) {
   // Level 2: Young Pine (2-Tier Stepped Pine)
   if (level === 2) {
     return `
-      <rect x="${x}" y="${y + 2}" width="11" height="11" rx="2" fill="#0e3d26" stroke="#22c55e" stroke-width="0.7" stroke-opacity="0.6"/>
+      <rect x="${x}" y="${y + 2}" width="11" height="11" rx="2" fill="#0f3322" stroke="#22c55e" stroke-width="0.8" stroke-opacity="0.8"/>
       <!-- trunk -->
       <rect x="${x + 4.5}" y="${y + 8}" width="2" height="4" fill="#713f12"/>
       <!-- Lower Tier -->
@@ -58,7 +57,7 @@ function renderTree(level, x, y) {
   // Level 3: Thriving Pine (3-Tier Stepped Pine)
   if (level === 3) {
     return `
-      <rect x="${x}" y="${y + 2}" width="11" height="11" rx="2" fill="#134e2a" stroke="#4ade80" stroke-width="0.8"/>
+      <rect x="${x}" y="${y + 2}" width="11" height="11" rx="2" fill="#134e2a" stroke="#4ade80" stroke-width="0.9"/>
       <!-- trunk -->
       <rect x="${x + 4.5}" y="${y + 8}" width="2" height="4.5" fill="#713f12"/>
       <!-- Tier 1: Lower -->
@@ -72,9 +71,9 @@ function renderTree(level, x, y) {
     `;
   }
 
-  // Level 4: Elder Pine / Giant Evergreen (4-Tier Stepped Pine - 100% Consistent Family!)
+  // Level 4: Elder Pine (4-Tier Stepped Pine)
   return `
-    <rect x="${x}" y="${y + 2}" width="11" height="11" rx="2" fill="#14532d" stroke="#86efac" stroke-width="1"/>
+    <rect x="${x}" y="${y + 2}" width="11" height="11" rx="2" fill="#14532d" stroke="#86efac" stroke-width="1.1"/>
     <!-- trunk -->
     <rect x="${x + 4.5}" y="${y + 8}" width="2" height="4.5" fill="#713f12"/>
     <!-- Tier 1: Grand Base -->
@@ -94,8 +93,6 @@ async function main() {
   const data = await fetchContributions();
   const contributions = data.contributions || [];
   const totalTrees = data.total ? (data.total[Object.keys(data.total)[0]] || 44) : 44;
-
-  console.log(`[🌲] Total contributions / trees planted: ${totalTrees}`);
 
   const weeks = [];
   let currentWeek = [];
@@ -137,18 +134,22 @@ async function main() {
 
   const svgContent = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 250" width="100%" height="250">
   <defs>
-    <!-- Deep Forest Nature Gradient -->
+    <!-- Seamless Canvas Match (#0D1117) with Emerald Ambient Gradient -->
     <linearGradient id="forest-bg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#02140a" />
-      <stop offset="45%" stop-color="#052416" />
-      <stop offset="100%" stop-color="#03170d" />
+      <stop offset="0%" stop-color="#0d1117" />
+      <stop offset="50%" stop-color="#0e2119" />
+      <stop offset="100%" stop-color="#0d1117" />
     </linearGradient>
 
-    <!-- Organic Moss Texture Pattern -->
+    <radialGradient id="forest-glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#22c55e" stop-opacity="0.08" />
+      <stop offset="100%" stop-color="#0d1117" stop-opacity="0" />
+    </radialGradient>
+
+    <!-- Organic Moss Pattern -->
     <pattern id="moss-pattern" width="24" height="24" patternUnits="userSpaceOnUse">
-      <circle cx="2" cy="2" r="0.8" fill="#22c55e" opacity="0.08" />
-      <circle cx="14" cy="10" r="1.2" fill="#15803d" opacity="0.06" />
-      <circle cx="20" cy="18" r="0.8" fill="#4ade80" opacity="0.05" />
+      <circle cx="2" cy="2" r="0.8" fill="#22c55e" opacity="0.06" />
+      <circle cx="14" cy="10" r="1.2" fill="#15803d" opacity="0.05" />
     </pattern>
 
     <!-- Emerald Leaf Glow -->
@@ -158,14 +159,15 @@ async function main() {
     </filter>
   </defs>
 
-  <!-- Deep Forest Background Frame -->
-  <rect width="920" height="250" rx="14" fill="url(#forest-bg)" stroke="#165b38" stroke-width="1.4" />
+  <!-- Seamless Canvas Frame (#0D1117) -->
+  <rect width="920" height="250" rx="14" fill="url(#forest-bg)" stroke="#165b38" stroke-width="1.2" />
+  <rect width="920" height="250" rx="14" fill="url(#forest-glow)" />
   <rect width="920" height="250" rx="14" fill="url(#moss-pattern)" />
-  <rect x="1" y="1" width="918" height="248" rx="13" fill="none" stroke="#22c55e" stroke-width="0.8" stroke-opacity="0.3" />
+  <rect x="1.5" y="1.5" width="917" height="247" rx="12.5" fill="none" stroke="#22c55e" stroke-width="0.7" stroke-opacity="0.25" />
 
-  <!-- Terminal Window Top Bar -->
-  <path d="M 0 14 Q 0 0 14 0 L 906 0 Q 920 0 920 14 L 920 36 L 0 36 Z" fill="#03190e" />
-  <line x1="0" y1="36" x2="920" y2="36" stroke="#165b38" stroke-width="1" />
+  <!-- Terminal Window Top Bar (GitHub Dark Unified) -->
+  <path d="M 0 14 Q 0 0 14 0 L 906 0 Q 920 0 920 14 L 920 36 L 0 36 Z" fill="#161b22" />
+  <line x1="0" y1="36" x2="920" y2="36" stroke="#21262d" stroke-width="1" />
 
   <!-- Window Dots -->
   <circle cx="24" cy="18" r="5" fill="#15803d" opacity="0.9" />
@@ -192,20 +194,20 @@ async function main() {
   <!-- Month Labels -->
   ${monthLabels.join('\n  ')}
 
-  <!-- 52x7 Forest Trees Grid (Consistent Stepped Pines) -->
+  <!-- 52x7 Forest Trees Grid -->
   <g id="forest-grid">
     ${forestCellsSvg}
   </g>
 
   <!-- Bottom Legend Bar -->
   <g transform="translate(60, 210)">
-    <line x1="0" y1="0" x2="800" y2="0" stroke="#0e3d26" stroke-width="1" />
+    <line x1="0" y1="0" x2="800" y2="0" stroke="#21262d" stroke-width="1" />
     
     <text x="0" y="20" font-family="'JetBrains Mono', monospace" font-size="10" fill="#6ee7b7">
       <tspan fill="#4ade80">●</tspan> ARCH LINUX NATURE GROVE // STEPPED PINE TREE ARCHITECTURE
     </text>
 
-    <!-- Legend Scale (1-tier -> 2-tier -> 3-tier -> 4-tier) -->
+    <!-- Legend Scale -->
     <g transform="translate(560, 8)" font-family="'JetBrains Mono', monospace" font-size="9.5" fill="#86efac">
       <text x="-32" y="10" text-anchor="end" fill="#6ee7b7">Dormant</text>
       ${renderTree(0, 0, 0)}

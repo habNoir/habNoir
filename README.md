@@ -38,7 +38,7 @@
 
 <br/>
 
-<img src="https://streak-stats.demolab.com/?user=habNoir&theme=dark&background=02140A&border=165B38&stroke=22C55E&ring=22C55E&fire=4ADE80&currStreakNum=4ADE80&sideNums=F0FDF4&currStreakLabel=22C55E&sideLabels=86EFAC&dates=6EE7B7" width="100%" alt="habNoir Streak Stats" />
+<img src="https://streak-stats.demolab.com/?user=habNoir&theme=dark&background=0D1117&border=165B38&stroke=22C55E&ring=22C55E&fire=4ADE80&currStreakNum=4ADE80&sideNums=F0FDF4&currStreakLabel=22C55E&sideLabels=86EFAC&dates=6EE7B7" width="100%" alt="habNoir Streak Stats" />
 
 </div>
 
@@ -63,7 +63,11 @@
 <!-- REPOS-LIST:START -->
 | 📦 Project / Repository | 📝 Focus / Description | ⚡ Primary Tech | ⭐ Stars | 🕒 Last Push |
 | :--- | :--- | :---: | :---: | :---: |
+<<<<<<< Updated upstream
 | **[`habNoir / vibe-motion-lyrics`](https://github.com/habNoir/vibe-motion-lyrics)** | 16:9 VS Code kinetic typography lyrics video studio with auto-sync AI backend (React JS + Vite) | `HTML` | `—` | `42m ago` |
+=======
+| **[`habNoir / vibe-motion-lyrics`](https://github.com/habNoir/vibe-motion-lyrics)** | 16:9 VS Code kinetic typography lyrics video studio with auto-sync AI backend (React JS + Vite) | `HTML` | `—` | `2h ago` |
+>>>>>>> Stashed changes
 | **[`habNoir / marimo`](https://github.com/habNoir/marimo)** | *No description provided* | 🟨 JavaScript | `★ 2` | `1mo ago` |
 | **[`habNoir / NotAFK-HAB`](https://github.com/habNoir/NotAFK-HAB)** | *No description provided* | 🔵 C++ | `—` | `5mo ago` |
 | **[`habNoir / habNoir.github.io`](https://github.com/habNoir/habNoir.github.io)** | *No description provided* | `HTML` | `—` | `9mo ago` |

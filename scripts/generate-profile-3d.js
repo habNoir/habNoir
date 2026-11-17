@@ -1,10 +1,8 @@
 /**
  * 3D Isometric Forest Contribution Graph Generator for habNoir
+ * Seamless Canvas Match (#0D1117 + Emerald Ambient Glow)
  * Close-up dramatic camera POV with prominent 3D voxel moss pedestals
  * and consistent stepped pixel pine trees.
- * Generates:
- *   - profile-3d-contrib/profile-green-animate.svg
- *   - profile-3d-contrib/profile-green.svg
  */
 
 const fs = require('fs');
@@ -24,7 +22,6 @@ function generate3DGraph(contributions, totalTrees, isAnimated = true) {
   const svgWidth = 960;
   const svgHeight = 470;
 
-  // Group into weeks (53 weeks, 7 days each)
   const weeks = [];
   let curWeek = [];
   for (let i = 0; i < contributions.length; i++) {
@@ -35,9 +32,6 @@ function generate3DGraph(contributions, totalTrees, isAnimated = true) {
     }
   }
 
-  // CLOSE-UP DRAMATIC CAMERA POV PARAMETERS:
-  // u (weeks): stretches across 864px (from x=59 to x=923)
-  // v (days): spans across the depth
   const originX = 185;
   const originY = 126;
   const uStepX = 14.2;
@@ -45,16 +39,15 @@ function generate3DGraph(contributions, totalTrees, isAnimated = true) {
   const vStepX = -21.0;
   const vStepY = 11.8;
 
-  // Chunky 3D Tile Dimensions
   const tileHalfW = 12.0;
   const tileHalfH = 6.8;
 
-  // Color palette - deep forest nature green
+  // Color palette - Seamless with GitHub Dark canvas #0D1117
   const palette = {
-    0: { top: '#082316', left: '#04160d', right: '#061c11' },
-    1: { top: '#0f482a', left: '#0a301c', right: '#0c3a22' },
-    2: { top: '#166534', left: '#114a27', right: '#14572e' },
-    3: { top: '#15803d', left: '#105e2d', right: '#136f35' },
+    0: { top: '#161b22', left: '#0d1117', right: '#12161d' },
+    1: { top: '#0f3823', left: '#092115', right: '#0c2d1c' },
+    2: { top: '#166534', left: '#104926', right: '#13572d' },
+    3: { top: '#15803d', left: '#0e5c2b', right: '#126e34' },
     4: { top: '#22c55e', left: '#15803d', right: '#16a34a' }
   };
 
@@ -62,7 +55,6 @@ function generate3DGraph(contributions, totalTrees, isAnimated = true) {
 
   let blocksSvg = '';
 
-  // Render back-to-front (painters algorithm)
   const items = [];
   weeks.forEach((week, wIdx) => {
     week.forEach((day, dIdx) => {
@@ -79,21 +71,16 @@ function generate3DGraph(contributions, totalTrees, isAnimated = true) {
     const height = blockHeights[level];
     const colors = palette[level];
 
-    // Base position
     const baseX = Number((originX + wIdx * uStepX + dIdx * vStepX).toFixed(1));
     const baseY = Number((originY + wIdx * uStepY + dIdx * vStepY).toFixed(1));
-
-    // Top face position (elevated by height)
     const topY = Number((baseY - height).toFixed(1));
 
-    // Isometric Rhombus Points
     const tCenter = `${baseX},${topY}`;
     const tNorth = `${baseX},${(topY - tileHalfH).toFixed(1)}`;
     const tEast = `${(baseX + tileHalfW).toFixed(1)},${topY}`;
     const tSouth = `${baseX},${(topY + tileHalfH).toFixed(1)}`;
     const tWest = `${(baseX - tileHalfW).toFixed(1)},${topY}`;
 
-    // Base bottom points
     const bSouth = `${baseX},${(baseY + tileHalfH).toFixed(1)}`;
     const bWest = `${(baseX - tileHalfW).toFixed(1)},${baseY}`;
     const bEast = `${(baseX + tileHalfW).toFixed(1)},${baseY}`;
@@ -103,23 +90,17 @@ function generate3DGraph(contributions, totalTrees, isAnimated = true) {
 
     let blockMarkup = `<g class="iso-block" ${animStyle}>`;
 
-    // Left vertical wall
     if (height > 0) {
       blockMarkup += `<polygon points="${tWest} ${tSouth} ${bSouth} ${bWest}" fill="${colors.left}" />`;
     }
-    // Right vertical wall
     if (height > 0) {
       blockMarkup += `<polygon points="${tSouth} ${tEast} ${bEast} ${bSouth}" fill="${colors.right}" />`;
     }
-    // Top moss face
-    blockMarkup += `<polygon points="${tNorth} ${tEast} ${tSouth} ${tWest}" fill="${colors.top}" stroke="#165b38" stroke-width="0.5" />`;
+    blockMarkup += `<polygon points="${tNorth} ${tEast} ${tSouth} ${tWest}" fill="${colors.top}" stroke="${level === 0 ? '#21262d' : '#165b38'}" stroke-width="0.5" />`;
 
-    // CLOSE-UP STEPPED PINE TREE ON TOP (100% CONSISTENT MORPHOLOGY)
     if (level === 0) {
-      // Level 0: Tiny seedling sprout on moss pedestal
-      blockMarkup += `<circle cx="${baseX}" cy="${topY}" r="1.5" fill="#15803d" opacity="0.65"/>`;
+      blockMarkup += `<circle cx="${baseX}" cy="${topY}" r="1.2" fill="#165b38" opacity="0.6"/>`;
     } else if (level === 1) {
-      // Level 1: Sapling (1-Tier Stepped Pine)
       blockMarkup += `
         <rect x="${(baseX - 1).toFixed(1)}" y="${(topY - 4).toFixed(1)}" width="2" height="4" fill="#713f12"/>
         <polygon points="${baseX},${(topY - 12).toFixed(1)} ${(baseX - 5).toFixed(1)},${(topY - 4).toFixed(1)} ${(baseX + 5).toFixed(1)},${(topY - 4).toFixed(1)}" fill="#166534"/>
@@ -127,7 +108,6 @@ function generate3DGraph(contributions, totalTrees, isAnimated = true) {
         <circle cx="${baseX}" cy="${(topY - 11).toFixed(1)}" r="1.2" fill="#86efac"/>
       `;
     } else if (level === 2) {
-      // Level 2: Young Pine (2-Tier Stepped Pine)
       blockMarkup += `
         <rect x="${(baseX - 1.2).toFixed(1)}" y="${(topY - 5).toFixed(1)}" width="2.4" height="5" fill="#713f12"/>
         <polygon points="${baseX},${(topY - 11).toFixed(1)} ${(baseX - 6).toFixed(1)},${(topY - 5).toFixed(1)} ${(baseX + 6).toFixed(1)},${(topY - 5).toFixed(1)}" fill="#14532d"/>
@@ -135,7 +115,6 @@ function generate3DGraph(contributions, totalTrees, isAnimated = true) {
         <circle cx="${baseX}" cy="${(topY - 16).toFixed(1)}" r="1.3" fill="#86efac"/>
       `;
     } else if (level === 3) {
-      // Level 3: Thriving Pine (3-Tier Stepped Pine)
       blockMarkup += `
         <rect x="${(baseX - 1.5).toFixed(1)}" y="${(topY - 6).toFixed(1)}" width="3" height="6" fill="#713f12"/>
         <polygon points="${baseX},${(topY - 11).toFixed(1)} ${(baseX - 7).toFixed(1)},${(topY - 5).toFixed(1)} ${(baseX + 7).toFixed(1)},${(topY - 5).toFixed(1)}" fill="#052e16"/>
@@ -145,7 +124,6 @@ function generate3DGraph(contributions, totalTrees, isAnimated = true) {
         <circle cx="${baseX}" cy="${(topY - 21).toFixed(1)}" r="1.5" fill="#86efac"/>
       `;
     } else if (level === 4) {
-      // Level 4: Elder Pine (4-Tier Stepped Pine)
       blockMarkup += `
         <rect x="${(baseX - 1.8).toFixed(1)}" y="${(topY - 7).toFixed(1)}" width="3.6" height="7" fill="#713f12"/>
         <polygon points="${baseX},${(topY - 12).toFixed(1)} ${(baseX - 8.5).toFixed(1)},${(topY - 5).toFixed(1)} ${(baseX + 8.5).toFixed(1)},${(topY - 5).toFixed(1)}" fill="#052e16"/>
@@ -171,24 +149,32 @@ function generate3DGraph(contributions, totalTrees, isAnimated = true) {
       }
       ` : ''}
     </style>
+    <!-- Seamless Canvas Match (#0D1117) with Emerald Ambient Gradient -->
     <linearGradient id="forest-3d-bg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#02140a" />
-      <stop offset="50%" stop-color="#042013" />
-      <stop offset="100%" stop-color="#010f07" />
+      <stop offset="0%" stop-color="#0d1117" />
+      <stop offset="50%" stop-color="#0e1f18" />
+      <stop offset="100%" stop-color="#0d1117" />
     </linearGradient>
+
+    <radialGradient id="forest-3d-glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#22c55e" stop-opacity="0.08" />
+      <stop offset="100%" stop-color="#0d1117" stop-opacity="0" />
+    </radialGradient>
+
     <filter id="emerald-glow" x="-20%" y="-20%" width="140%" height="140%">
       <feGaussianBlur stdDeviation="3" result="blur" />
       <feComposite in="SourceGraphic" in2="blur" operator="over" />
     </filter>
   </defs>
 
-  <!-- Deep Forest 3D Canvas Background -->
-  <rect width="${svgWidth}" height="${svgHeight}" rx="14" fill="url(#forest-3d-bg)" stroke="#165b38" stroke-width="1.6" />
-  <rect x="2" y="2" width="${svgWidth - 4}" height="${svgHeight - 4}" rx="12" fill="none" stroke="#22c55e" stroke-width="0.8" stroke-opacity="0.25" />
+  <!-- Seamless Canvas Background (#0D1117) -->
+  <rect width="${svgWidth}" height="${svgHeight}" rx="14" fill="url(#forest-3d-bg)" stroke="#165b38" stroke-width="1.2" />
+  <rect width="${svgWidth}" height="${svgHeight}" rx="14" fill="url(#forest-3d-glow)" />
+  <rect x="1.5" y="1.5" width="${svgWidth - 3}" height="${svgHeight - 3}" rx="12.5" fill="none" stroke="#22c55e" stroke-width="0.7" stroke-opacity="0.25" />
 
-  <!-- Terminal Top Bar -->
-  <path d="M 0 14 Q 0 0 14 0 L ${svgWidth - 14} 0 Q ${svgWidth} 0 ${svgWidth} 14 L ${svgWidth} 36 L 0 36 Z" fill="#02180d" />
-  <line x1="0" y1="36" x2="${svgWidth}" y2="36" stroke="#165b38" stroke-width="1.2" />
+  <!-- Terminal Top Bar (GitHub Dark Unified) -->
+  <path d="M 0 14 Q 0 0 14 0 L ${svgWidth - 14} 0 Q ${svgWidth} 0 ${svgWidth} 14 L ${svgWidth} 36 L 0 36 Z" fill="#161b22" />
+  <line x1="0" y1="36" x2="${svgWidth}" y2="36" stroke="#21262d" stroke-width="1" />
 
   <!-- Terminal Window Controls -->
   <circle cx="24" cy="18" r="5" fill="#15803d" />
@@ -205,14 +191,14 @@ function generate3DGraph(contributions, totalTrees, isAnimated = true) {
     🌿 CLOSE-UP 3D GROVE // <tspan fill="#f0fdf4" font-weight="bold">${totalTrees} COMMITS PLANTED</tspan>
   </text>
 
-  <!-- 3D Voxel Blocks & Trees (Close-up Perspective) -->
+  <!-- 3D Voxel Blocks & Trees -->
   <g id="iso-forest">
     ${blocksSvg}
   </g>
 
   <!-- Bottom Legend Bar -->
   <g transform="translate(40, ${svgHeight - 34})">
-    <line x1="0" y1="0" x2="${svgWidth - 80}" y2="0" stroke="#0e3d26" stroke-width="1" />
+    <line x1="0" y1="0" x2="${svgWidth - 80}" y2="0" stroke="#21262d" stroke-width="1" />
     
     <circle cx="6" cy="18" r="3.5" fill="#4ade80" filter="url(#emerald-glow)" />
     <text x="18" y="21" font-size="9.5" fill="#86efac">
@@ -222,8 +208,8 @@ function generate3DGraph(contributions, totalTrees, isAnimated = true) {
     <!-- Legend Scale -->
     <g transform="translate(680, 8)" font-size="9" fill="#86efac">
       <text x="-15" y="12" text-anchor="end" fill="#6ee7b7">Dormant</text>
-      <rect x="0" y="4" width="10" height="10" rx="2" fill="#082316" stroke="#165b38" stroke-width="0.8"/>
-      <rect x="22" y="4" width="10" height="10" rx="2" fill="#0f482a" stroke="#165b38" stroke-width="0.8"/>
+      <rect x="0" y="4" width="10" height="10" rx="2" fill="#161b22" stroke="#21262d" stroke-width="0.8"/>
+      <rect x="22" y="4" width="10" height="10" rx="2" fill="#0f3823" stroke="#165b38" stroke-width="0.8"/>
       <rect x="44" y="4" width="10" height="10" rx="2" fill="#166534" stroke="#22c55e" stroke-width="0.8"/>
       <rect x="66" y="4" width="10" height="10" rx="2" fill="#15803d" stroke="#4ade80" stroke-width="0.8"/>
       <rect x="88" y="4" width="10" height="10" rx="2" fill="#22c55e" stroke="#86efac" stroke-width="0.8"/>
