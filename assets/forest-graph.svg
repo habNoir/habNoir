@@ -47,7 +47,7 @@
 
   <!-- Forest Telemetry / Metadata Right -->
   <text x="895" y="22" text-anchor="end" font-family="'JetBrains Mono', monospace" font-size="10" fill="#6ee7b7" opacity="0.9">
-    🌿 ECOSYSTEM: <tspan fill="#4ade80" font-weight="bold">HEALTHY</tspan> | CANOPY: <tspan fill="#ffffff" font-weight="bold">60 TREES</tspan>
+    🌿 ECOSYSTEM: <tspan fill="#4ade80" font-weight="bold">HEALTHY</tspan> | CANOPY: <tspan fill="#ffffff" font-weight="bold">67 TREES</tspan>
   </text>
 
   <!-- Weekday Labels -->
