@@ -1,7 +1,7 @@
 /**
  * 3D Isometric Forest Contribution Graph Generator for habNoir
- * Renders a full 3D isometric voxel landscape where contribution blocks
- * rise up as green forest pedestals topped with consistent stepped pixel pine trees.
+ * Close-up dramatic camera POV with prominent 3D voxel moss pedestals
+ * and consistent stepped pixel pine trees.
  * Generates:
  *   - profile-3d-contrib/profile-green-animate.svg
  *   - profile-3d-contrib/profile-green.svg
@@ -21,9 +21,8 @@ async function fetchContributions() {
 }
 
 function generate3DGraph(contributions, totalTrees, isAnimated = true) {
-  // SVG Canvas dimensions
   const svgWidth = 960;
-  const svgHeight = 440;
+  const svgHeight = 470;
 
   // Group into weeks (53 weeks, 7 days each)
   const weeks = [];
@@ -36,37 +35,34 @@ function generate3DGraph(contributions, totalTrees, isAnimated = true) {
     }
   }
 
-  // Isometric projection constants
-  // u: week index (0..52), v: day index (0..6)
-  // X axis points down-right (30 deg)
-  // Y axis points down-left (150 deg)
-  // Z axis points straight UP (-Y)
-  const originX = 490;
-  const originY = 120;
-  const uStepX = 7.6;
-  const uStepY = 4.3;
-  const vStepX = -13.2;
-  const vStepY = 7.5;
+  // CLOSE-UP DRAMATIC CAMERA POV PARAMETERS:
+  // u (weeks): stretches across 864px (from x=59 to x=923)
+  // v (days): spans across the depth
+  const originX = 185;
+  const originY = 126;
+  const uStepX = 14.2;
+  const uStepY = 4.2;
+  const vStepX = -21.0;
+  const vStepY = 11.8;
 
-  // Block dimensions (rhombus top)
-  const tileHalfW = 8.5;
-  const tileHalfH = 4.8;
+  // Chunky 3D Tile Dimensions
+  const tileHalfW = 12.0;
+  const tileHalfH = 6.8;
 
-  // Color palette - consistent full nature green
+  // Color palette - deep forest nature green
   const palette = {
-    0: { top: '#082316', left: '#04160d', right: '#061c11', treeTier: 0 },
-    1: { top: '#0f482a', left: '#0a301c', right: '#0c3a22', treeTier: 1 },
-    2: { top: '#166534', left: '#114a27', right: '#14572e', treeTier: 2 },
-    3: { top: '#15803d', left: '#105e2d', right: '#136f35', treeTier: 3 },
-    4: { top: '#22c55e', left: '#15803d', right: '#16a34a', treeTier: 4 }
+    0: { top: '#082316', left: '#04160d', right: '#061c11' },
+    1: { top: '#0f482a', left: '#0a301c', right: '#0c3a22' },
+    2: { top: '#166534', left: '#114a27', right: '#14572e' },
+    3: { top: '#15803d', left: '#105e2d', right: '#136f35' },
+    4: { top: '#22c55e', left: '#15803d', right: '#16a34a' }
   };
 
-  const blockHeights = [3, 10, 20, 32, 46];
+  const blockHeights = [4, 14, 26, 42, 60];
 
   let blocksSvg = '';
 
-  // Render back-to-front (top-to-bottom in isometric depth)
-  // Depth key: u + v ensures proper painters algorithm ordering
+  // Render back-to-front (painters algorithm)
   const items = [];
   weeks.forEach((week, wIdx) => {
     week.forEach((day, dIdx) => {
@@ -83,94 +79,80 @@ function generate3DGraph(contributions, totalTrees, isAnimated = true) {
     const height = blockHeights[level];
     const colors = palette[level];
 
-    // Center base position
-    const baseX = originX + wIdx * uStepX + dIdx * vStepX;
-    const baseY = originY + wIdx * uStepY + dIdx * vStepY;
+    // Base position
+    const baseX = Number((originX + wIdx * uStepX + dIdx * vStepX).toFixed(1));
+    const baseY = Number((originY + wIdx * uStepY + dIdx * vStepY).toFixed(1));
 
     // Top face position (elevated by height)
-    const topY = baseY - height;
+    const topY = Number((baseY - height).toFixed(1));
 
-    // Points for Isometric Box
-    // Top rhombus
+    // Isometric Rhombus Points
     const tCenter = `${baseX},${topY}`;
-    const tNorth = `${baseX},${topY - tileHalfH}`;
-    const tEast = `${baseX + tileHalfW},${topY}`;
-    const tSouth = `${baseX},${topY + tileHalfH}`;
-    const tWest = `${baseX - tileHalfW},${topY}`;
+    const tNorth = `${baseX},${(topY - tileHalfH).toFixed(1)}`;
+    const tEast = `${(baseX + tileHalfW).toFixed(1)},${topY}`;
+    const tSouth = `${baseX},${(topY + tileHalfH).toFixed(1)}`;
+    const tWest = `${(baseX - tileHalfW).toFixed(1)},${topY}`;
 
-    // Bottom points
-    const bSouth = `${baseX},${baseY + tileHalfH}`;
-    const bWest = `${baseX - tileHalfW},${baseY}`;
-    const bEast = `${baseX + tileHalfW},${baseY}`;
+    // Base bottom points
+    const bSouth = `${baseX},${(baseY + tileHalfH).toFixed(1)}`;
+    const bWest = `${(baseX - tileHalfW).toFixed(1)},${baseY}`;
+    const bEast = `${(baseX + tileHalfW).toFixed(1)},${baseY}`;
 
-    const delay = isAnimated ? (index * 0.003).toFixed(3) : 0;
-    const animStyle = isAnimated ? `style="animation: growBlock 0.8s cubic-bezier(0.34, 1.56, 0.64, 1) ${delay}s both;"` : '';
+    const delay = isAnimated ? (index * 0.0025).toFixed(3) : 0;
+    const animStyle = isAnimated ? `style="animation: growBlock 0.7s cubic-bezier(0.34, 1.56, 0.64, 1) ${delay}s both;"` : '';
 
     let blockMarkup = `<g class="iso-block" ${animStyle}>`;
 
-    // Left vertical face (if height > 0)
+    // Left vertical wall
     if (height > 0) {
       blockMarkup += `<polygon points="${tWest} ${tSouth} ${bSouth} ${bWest}" fill="${colors.left}" />`;
     }
-    // Right vertical face (if height > 0)
+    // Right vertical wall
     if (height > 0) {
       blockMarkup += `<polygon points="${tSouth} ${tEast} ${bEast} ${bSouth}" fill="${colors.right}" />`;
     }
-    // Top face
-    blockMarkup += `<polygon points="${tNorth} ${tEast} ${tSouth} ${tWest}" fill="${colors.top}" stroke="#165b38" stroke-width="0.3" />`;
+    // Top moss face
+    blockMarkup += `<polygon points="${tNorth} ${tEast} ${tSouth} ${tWest}" fill="${colors.top}" stroke="#165b38" stroke-width="0.5" />`;
 
-    // TOPPED WITH CONSISTENT STEPPED PIXEL PINE TREE!
-    // Level 0: Tiny 2-pixel sprout on top of the moss block
+    // CLOSE-UP STEPPED PINE TREE ON TOP (100% CONSISTENT MORPHOLOGY)
     if (level === 0) {
-      blockMarkup += `
-        <circle cx="${baseX}" cy="${topY}" r="1" fill="#14532d" opacity="0.6"/>
-      `;
+      // Level 0: Tiny seedling sprout on moss pedestal
+      blockMarkup += `<circle cx="${baseX}" cy="${topY}" r="1.5" fill="#15803d" opacity="0.65"/>`;
     } else if (level === 1) {
-      // Level 1: Sapling (Tiny 1-tier stepped pine)
+      // Level 1: Sapling (1-Tier Stepped Pine)
       blockMarkup += `
-        <rect x="${baseX - 0.7}" y="${topY - 3}" width="1.4" height="3" fill="#713f12"/>
-        <polygon points="${baseX},${topY - 8} ${baseX - 3.5},${topY - 3} ${baseX + 3.5},${topY - 3}" fill="#166534"/>
-        <polygon points="${baseX},${topY - 8} ${baseX - 2.5},${topY - 4.5} ${baseX + 2.5},${topY - 4.5}" fill="#22c55e"/>
-        <circle cx="${baseX}" cy="${topY - 7.5}" r="0.8" fill="#86efac"/>
+        <rect x="${(baseX - 1).toFixed(1)}" y="${(topY - 4).toFixed(1)}" width="2" height="4" fill="#713f12"/>
+        <polygon points="${baseX},${(topY - 12).toFixed(1)} ${(baseX - 5).toFixed(1)},${(topY - 4).toFixed(1)} ${(baseX + 5).toFixed(1)},${(topY - 4).toFixed(1)}" fill="#166534"/>
+        <polygon points="${baseX},${(topY - 12).toFixed(1)} ${(baseX - 3.5).toFixed(1)},${(topY - 6).toFixed(1)} ${(baseX + 3.5).toFixed(1)},${(topY - 6).toFixed(1)}" fill="#22c55e"/>
+        <circle cx="${baseX}" cy="${(topY - 11).toFixed(1)}" r="1.2" fill="#86efac"/>
       `;
     } else if (level === 2) {
-      // Level 2: Young Pine (2-tier stepped pine)
+      // Level 2: Young Pine (2-Tier Stepped Pine)
       blockMarkup += `
-        <rect x="${baseX - 0.8}" y="${topY - 4}" width="1.6" height="4" fill="#713f12"/>
-        <!-- Tier 1 -->
-        <polygon points="${baseX},${topY - 8} ${baseX - 4.5},${topY - 4} ${baseX + 4.5},${topY - 4}" fill="#14532d"/>
-        <polygon points="${baseX},${topY - 8} ${baseX - 3.5},${topY - 5} ${baseX + 3.5},${topY - 5}" fill="#16a34a"/>
-        <!-- Tier 2 -->
-        <polygon points="${baseX},${topY - 12} ${baseX - 3},${topY - 7.5} ${baseX + 3},${topY - 7.5}" fill="#22c55e"/>
-        <circle cx="${baseX}" cy="${topY - 11.5}" r="0.9" fill="#86efac"/>
+        <rect x="${(baseX - 1.2).toFixed(1)}" y="${(topY - 5).toFixed(1)}" width="2.4" height="5" fill="#713f12"/>
+        <polygon points="${baseX},${(topY - 11).toFixed(1)} ${(baseX - 6).toFixed(1)},${(topY - 5).toFixed(1)} ${(baseX + 6).toFixed(1)},${(topY - 5).toFixed(1)}" fill="#14532d"/>
+        <polygon points="${baseX},${(topY - 17).toFixed(1)} ${(baseX - 4).toFixed(1)},${(topY - 10).toFixed(1)} ${(baseX + 4).toFixed(1)},${(topY - 10).toFixed(1)}" fill="#22c55e"/>
+        <circle cx="${baseX}" cy="${(topY - 16).toFixed(1)}" r="1.3" fill="#86efac"/>
       `;
     } else if (level === 3) {
-      // Level 3: Thriving Pine (3-tier stepped pine)
+      // Level 3: Thriving Pine (3-Tier Stepped Pine)
       blockMarkup += `
-        <rect x="${baseX - 1}" y="${topY - 4}" width="2" height="4" fill="#713f12"/>
-        <!-- Tier 1 -->
-        <polygon points="${baseX},${topY - 8} ${baseX - 5.5},${topY - 4} ${baseX + 5.5},${topY - 4}" fill="#052e16"/>
-        <polygon points="${baseX},${topY - 8} ${baseX - 4.5},${topY - 5} ${baseX + 4.5},${topY - 5}" fill="#15803d"/>
-        <!-- Tier 2 -->
-        <polygon points="${baseX},${topY - 12} ${baseX - 4},${topY - 7.5} ${baseX + 4},${topY - 7.5}" fill="#16a34a"/>
-        <!-- Tier 3 -->
-        <polygon points="${baseX},${topY - 15.5} ${baseX - 2.8},${topY - 11} ${baseX + 2.8},${topY - 11}" fill="#22c55e"/>
-        <circle cx="${baseX}" cy="${topY - 15}" r="1" fill="#86efac"/>
+        <rect x="${(baseX - 1.5).toFixed(1)}" y="${(topY - 6).toFixed(1)}" width="3" height="6" fill="#713f12"/>
+        <polygon points="${baseX},${(topY - 11).toFixed(1)} ${(baseX - 7).toFixed(1)},${(topY - 5).toFixed(1)} ${(baseX + 7).toFixed(1)},${(topY - 5).toFixed(1)}" fill="#052e16"/>
+        <polygon points="${baseX},${(topY - 11).toFixed(1)} ${(baseX - 5.5).toFixed(1)},${(topY - 6).toFixed(1)} ${(baseX + 5.5).toFixed(1)},${(topY - 6).toFixed(1)}" fill="#15803d"/>
+        <polygon points="${baseX},${(topY - 17).toFixed(1)} ${(baseX - 5).toFixed(1)},${(topY - 10).toFixed(1)} ${(baseX + 5).toFixed(1)},${(topY - 10).toFixed(1)}" fill="#16a34a"/>
+        <polygon points="${baseX},${(topY - 22).toFixed(1)} ${(baseX - 3.5).toFixed(1)},${(topY - 15).toFixed(1)} ${(baseX + 3.5).toFixed(1)},${(topY - 15).toFixed(1)}" fill="#22c55e"/>
+        <circle cx="${baseX}" cy="${(topY - 21).toFixed(1)}" r="1.5" fill="#86efac"/>
       `;
     } else if (level === 4) {
-      // Level 4: Elder Pine (4-tier majestic stepped pine)
+      // Level 4: Elder Pine (4-Tier Stepped Pine)
       blockMarkup += `
-        <rect x="${baseX - 1.2}" y="${topY - 5}" width="2.4" height="5" fill="#713f12"/>
-        <!-- Tier 1 -->
-        <polygon points="${baseX},${topY - 8} ${baseX - 6.5},${topY - 4.5} ${baseX + 6.5},${topY - 4.5}" fill="#052e16"/>
-        <polygon points="${baseX},${topY - 8} ${baseX - 5.5},${topY - 5.5} ${baseX + 5.5},${topY - 5.5}" fill="#15803d"/>
-        <!-- Tier 2 -->
-        <polygon points="${baseX},${topY - 12} ${baseX - 4.8},${topY - 8} ${baseX + 4.8},${topY - 8}" fill="#16a34a"/>
-        <!-- Tier 3 -->
-        <polygon points="${baseX},${topY - 16} ${baseX - 3.8},${topY - 11.5} ${baseX + 3.8},${topY - 11.5}" fill="#22c55e"/>
-        <!-- Tier 4 Spire -->
-        <polygon points="${baseX},${topY - 19.5} ${baseX - 2.5},${topY - 15} ${baseX + 2.5},${topY - 15}" fill="#4ade80"/>
-        <circle cx="${baseX}" cy="${topY - 19}" r="1.2" fill="#bbf7d0"/>
+        <rect x="${(baseX - 1.8).toFixed(1)}" y="${(topY - 7).toFixed(1)}" width="3.6" height="7" fill="#713f12"/>
+        <polygon points="${baseX},${(topY - 12).toFixed(1)} ${(baseX - 8.5).toFixed(1)},${(topY - 5).toFixed(1)} ${(baseX + 8.5).toFixed(1)},${(topY - 5).toFixed(1)}" fill="#052e16"/>
+        <polygon points="${baseX},${(topY - 18).toFixed(1)} ${(baseX - 6.8).toFixed(1)},${(topY - 11).toFixed(1)} ${(baseX + 6.8).toFixed(1)},${(topY - 11).toFixed(1)}" fill="#15803d"/>
+        <polygon points="${baseX},${(topY - 24).toFixed(1)} ${(baseX - 5).toFixed(1)},${(topY - 17).toFixed(1)} ${(baseX + 5).toFixed(1)},${(topY - 17).toFixed(1)}" fill="#16a34a"/>
+        <polygon points="${baseX},${(topY - 29).toFixed(1)} ${(baseX - 3.5).toFixed(1)},${(topY - 23).toFixed(1)} ${(baseX + 3.5).toFixed(1)},${(topY - 23).toFixed(1)}" fill="#4ade80"/>
+        <circle cx="${baseX}" cy="${(topY - 28).toFixed(1)}" r="1.8" fill="#bbf7d0"/>
       `;
     }
 
@@ -184,7 +166,7 @@ function generate3DGraph(contributions, totalTrees, isAnimated = true) {
       text { font-family: 'JetBrains Mono', 'Fira Code', 'Courier New', monospace; }
       ${isAnimated ? `
       @keyframes growBlock {
-        0% { transform: translateY(30px) scale(0.6); opacity: 0; }
+        0% { transform: translateY(35px) scale(0.7); opacity: 0; }
         100% { transform: translateY(0) scale(1); opacity: 1; }
       }
       ` : ''}
@@ -215,15 +197,15 @@ function generate3DGraph(contributions, totalTrees, isAnimated = true) {
 
   <!-- Terminal Command Header -->
   <text x="76" y="22" font-size="11" font-weight="600" fill="#a7f3d0">
-    habnoir@arch-forest:~$ <tspan fill="#4ade80">tree</tspan> <tspan fill="#86efac">--isometric-3d</tspan> <tspan fill="#6ee7b7">--biome=evergreen --year=2026</tspan>
+    habnoir@arch-forest:~$ <tspan fill="#4ade80">tree</tspan> <tspan fill="#86efac">--isometric-3d</tspan> <tspan fill="#6ee7b7">--biome=evergreen --close-up</tspan>
   </text>
 
   <!-- Telemetry Meta -->
   <text x="${svgWidth - 25}" y="22" text-anchor="end" font-size="10" fill="#6ee7b7">
-    🌿 3D VOXEL GROVE // <tspan fill="#f0fdf4" font-weight="bold">${totalTrees} COMMITS PLANTED</tspan>
+    🌿 CLOSE-UP 3D GROVE // <tspan fill="#f0fdf4" font-weight="bold">${totalTrees} COMMITS PLANTED</tspan>
   </text>
 
-  <!-- 3D Voxel Blocks & Trees -->
+  <!-- 3D Voxel Blocks & Trees (Close-up Perspective) -->
   <g id="iso-forest">
     ${blocksSvg}
   </g>
@@ -252,7 +234,7 @@ function generate3DGraph(contributions, totalTrees, isAnimated = true) {
 }
 
 async function main() {
-  console.log(`[🌲] Generating 3D Isometric Green Forest Contribution Graph for @${USERNAME}...`);
+  console.log(`[🌲] Generating Close-up 3D Isometric Forest for @${USERNAME}...`);
   if (!fs.existsSync(OUTPUT_DIR)) {
     fs.mkdirSync(OUTPUT_DIR, { recursive: true });
   }
@@ -261,17 +243,15 @@ async function main() {
   const contributions = data.contributions || [];
   const totalTrees = data.total ? (data.total[Object.keys(data.total)[0]] || 44) : 44;
 
-  // 1. Generate Animated 3D SVG
   const animSvg = generate3DGraph(contributions, totalTrees, true);
   const animPath = path.join(OUTPUT_DIR, 'profile-green-animate.svg');
   fs.writeFileSync(animPath, animSvg, 'utf-8');
-  console.log(`[✔] Animated 3D Graph written to: ${animPath}`);
+  console.log(`[✔] Animated Close-up 3D Graph written to: ${animPath}`);
 
-  // 2. Generate Static 3D SVG
   const staticSvg = generate3DGraph(contributions, totalTrees, false);
   const staticPath = path.join(OUTPUT_DIR, 'profile-green.svg');
   fs.writeFileSync(staticPath, staticSvg, 'utf-8');
-  console.log(`[✔] Static 3D Graph written to: ${staticPath}`);
+  console.log(`[✔] Static Close-up 3D Graph written to: ${staticPath}`);
 }
 
 main().catch(err => {
