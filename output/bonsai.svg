@@ -1,110 +1,107 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 320" width="384" height="320">
   <defs>
-    <!-- Pixel art crisp rendering -->
     <style>
       rect { shape-rendering: crispEdges; }
       text { font-family: 'JetBrains Mono', 'Courier New', monospace; }
     </style>
-    <filter id="neon-glow" x="-20%" y="-20%" width="140%" height="140%">
+    <filter id="neon-nature-glow" x="-20%" y="-20%" width="140%" height="140%">
       <feGaussianBlur stdDeviation="4" result="blur" />
       <feComposite in="SourceGraphic" in2="blur" operator="over" />
     </filter>
   </defs>
 
-  <!-- Background / Grid Canvas -->
-  <rect width="384" height="320" rx="12" fill="#0d1117" stroke="#30363d" stroke-width="1.2" />
+  <!-- Background / Deep Forest Nature Canvas -->
+  <rect width="384" height="320" rx="12" fill="#02140a" stroke="#165b38" stroke-width="1.4" />
 
   <!-- Subtitle Header -->
-  <text x="24" y="32" font-size="11" fill="#10b981" font-weight="bold" letter-spacing="1">GIT-BONSAI // LIVING COMMIT GARDEN</text>
-  <text x="24" y="48" font-size="9" fill="#8b949e">Procedural pixel growth driven by git contributions</text>
+  <text x="24" y="32" font-size="11" fill="#4ade80" font-weight="bold" letter-spacing="1">GIT-BONSAI // NATURE COMMIT GROVE</text>
+  <text x="24" y="48" font-size="9" fill="#86efac">Procedural forest growth driven by git contributions</text>
 
-  <!-- Bonsai Container / Graphic Group (Scale 4x Pixel Art) -->
+  <!-- Bonsai Container / Graphic Group -->
   <g transform="translate(68, 45)">
-    <!-- Ambient Green Halo -->
-    <circle cx="120" cy="110" r="70" fill="#10b981" opacity="0.07" filter="url(#neon-glow)" />
+    <!-- Ambient Green Forest Halo -->
+    <circle cx="120" cy="110" r="75" fill="#22c55e" opacity="0.1" filter="url(#neon-nature-glow)" />
 
     <!-- Top Canopy Pixel Clusters -->
-    <!-- Layer 1: Dark Green Foliage Base -->
-    <rect x="76" y="52" width="60" height="20" fill="#065f46" />
-    <rect x="68" y="60" width="76" height="24" fill="#065f46" />
-    <rect x="52" y="72" width="44" height="20" fill="#065f46" />
-    <rect x="132" y="68" width="48" height="20" fill="#065f46" />
+    <!-- Layer 1: Deep Pine Foliage Base -->
+    <rect x="76" y="52" width="60" height="20" fill="#052e16" />
+    <rect x="68" y="60" width="76" height="24" fill="#052e16" />
+    <rect x="52" y="72" width="44" height="20" fill="#052e16" />
+    <rect x="132" y="68" width="48" height="20" fill="#052e16" />
 
     <!-- Layer 2: Mid Emerald Foliage -->
-    <rect x="80" y="44" width="48" height="24" fill="#059669" />
-    <rect x="64" y="64" width="72" height="20" fill="#059669" />
-    <rect x="48" y="76" width="36" height="16" fill="#059669" />
-    <rect x="136" y="72" width="40" height="16" fill="#059669" />
-    <rect x="116" y="92" width="36" height="16" fill="#059669" />
+    <rect x="80" y="44" width="48" height="24" fill="#15803d" />
+    <rect x="64" y="64" width="72" height="20" fill="#15803d" />
+    <rect x="48" y="76" width="36" height="16" fill="#15803d" />
+    <rect x="136" y="72" width="40" height="16" fill="#15803d" />
+    <rect x="116" y="92" width="36" height="16" fill="#15803d" />
 
-    <!-- Layer 3: Vibrant Terminal Green Highlights -->
-    <rect x="88" y="40" width="32" height="16" fill="#10b981" />
-    <rect x="72" y="56" width="28" height="12" fill="#10b981" />
-    <rect x="112" y="60" width="32" height="12" fill="#10b981" />
-    <rect x="52" y="80" width="24" height="8" fill="#10b981" />
-    <rect x="144" y="76" width="24" height="8" fill="#10b981" />
+    <!-- Layer 3: Vibrant Nature Green Highlights -->
+    <rect x="88" y="40" width="32" height="16" fill="#22c55e" />
+    <rect x="72" y="56" width="28" height="12" fill="#22c55e" />
+    <rect x="112" y="60" width="32" height="12" fill="#22c55e" />
+    <rect x="52" y="80" width="24" height="8" fill="#22c55e" />
+    <rect x="144" y="76" width="24" height="8" fill="#22c55e" />
 
-    <!-- Layer 4: Neon Light Leaf Pixels -->
-    <rect x="92" y="44" width="8" height="8" fill="#34d399" />
-    <rect x="108" y="48" width="12" height="8" fill="#34d399" />
-    <rect x="76" y="60" width="8" height="8" fill="#34d399" />
-    <rect x="124" y="64" width="8" height="8" fill="#34d399" />
-    <rect x="148" y="72" width="8" height="8" fill="#34d399" />
-    <rect x="56" y="76" width="8" height="8" fill="#6ee7b7" />
-    <rect x="100" y="40" width="8" height="4" fill="#a7f3d0" />
+    <!-- Layer 4: Spring Mint / Neon Leaf Pixels -->
+    <rect x="92" y="44" width="8" height="8" fill="#4ade80" />
+    <rect x="108" y="48" width="12" height="8" fill="#4ade80" />
+    <rect x="76" y="60" width="8" height="8" fill="#4ade80" />
+    <rect x="124" y="64" width="8" height="8" fill="#4ade80" />
+    <rect x="148" y="72" width="8" height="8" fill="#4ade80" />
+    <rect x="56" y="76" width="8" height="8" fill="#86efac" />
+    <rect x="100" y="40" width="8" height="4" fill="#bbf7d0" />
 
-    <!-- Pixel Branches / Trunk -->
-    <!-- Main Center-Left Branch Support -->
-    <rect x="72" y="92" width="24" height="8" fill="#78350f" />
-    <rect x="84" y="88" width="16" height="12" fill="#92400e" />
+    <!-- Pixel Branches / Natural Wood Trunk -->
+    <rect x="72" y="92" width="24" height="8" fill="#713f12" />
+    <rect x="84" y="88" width="16" height="12" fill="#854d0e" />
     
-    <!-- Right Branch Support -->
-    <rect x="128" y="84" width="24" height="8" fill="#78350f" />
-    <rect x="124" y="88" width="16" height="8" fill="#92400e" />
+    <rect x="128" y="84" width="24" height="8" fill="#713f12" />
+    <rect x="124" y="88" width="16" height="8" fill="#854d0e" />
 
-    <!-- Main Upper Trunk (Angled Bonsai Shape) -->
-    <rect x="104" y="76" width="16" height="24" fill="#78350f" />
-    <rect x="108" y="80" width="8" height="20" fill="#92400e" />
+    <!-- Main Upper Trunk -->
+    <rect x="104" y="76" width="16" height="24" fill="#713f12" />
+    <rect x="108" y="80" width="8" height="20" fill="#854d0e" />
 
     <!-- Mid Trunk curve -->
-    <rect x="108" y="100" width="20" height="28" fill="#78350f" />
-    <rect x="112" y="104" width="12" height="20" fill="#92400e" />
-    <rect x="100" y="116" width="16" height="24" fill="#78350f" />
-    <rect x="104" y="120" width="10" height="16" fill="#92400e" />
+    <rect x="108" y="100" width="20" height="28" fill="#713f12" />
+    <rect x="112" y="104" width="12" height="20" fill="#854d0e" />
+    <rect x="100" y="116" width="16" height="24" fill="#713f12" />
+    <rect x="104" y="120" width="10" height="16" fill="#854d0e" />
 
     <!-- Lower Trunk & Roots -->
-    <rect x="96" y="136" width="32" height="24" fill="#78350f" />
-    <rect x="102" y="138" width="18" height="18" fill="#92400e" />
-    <rect x="90" y="152" width="16" height="12" fill="#78350f" />
-    <rect x="120" y="152" width="16" height="12" fill="#78350f" />
+    <rect x="96" y="136" width="32" height="24" fill="#713f12" />
+    <rect x="102" y="138" width="18" height="18" fill="#854d0e" />
+    <rect x="90" y="152" width="16" height="12" fill="#713f12" />
+    <rect x="120" y="152" width="16" height="12" fill="#713f12" />
 
-    <!-- Bonsai Pot (Traditional Ceramic Ceramic / Dark Minimalist) -->
-    <rect x="60" y="164" width="112" height="6" fill="#1e293b" />
-    <rect x="64" y="170" width="104" height="22" fill="#161e2e" stroke="#334155" stroke-width="1" />
+    <!-- Bonsai Pot (Dark Forest Earth Ceramic) -->
+    <rect x="60" y="164" width="112" height="6" fill="#0f291e" />
+    <rect x="64" y="170" width="104" height="22" fill="#061f14" stroke="#165b38" stroke-width="1" />
     <!-- Pot Rim Highlight -->
-    <rect x="66" y="172" width="100" height="3" fill="#10b981" opacity="0.6" />
+    <rect x="66" y="172" width="100" height="3" fill="#4ade80" opacity="0.7" />
     <!-- Pot Feet -->
-    <rect x="76" y="192" width="14" height="6" fill="#0f172a" />
-    <rect x="142" y="192" width="14" height="6" fill="#0f172a" />
+    <rect x="76" y="192" width="14" height="6" fill="#03140a" />
+    <rect x="142" y="192" width="14" height="6" fill="#03140a" />
 
-    <!-- Moss / Base Grass on Soil -->
-    <rect x="70" y="160" width="92" height="4" fill="#065f46" />
-    <rect x="80" y="158" width="12" height="3" fill="#10b981" />
-    <rect x="110" y="158" width="16" height="3" fill="#34d399" />
-    <rect x="136" y="158" width="10" height="3" fill="#10b981" />
+    <!-- Rich Moss & Grass on Soil -->
+    <rect x="70" y="160" width="92" height="4" fill="#052e16" />
+    <rect x="80" y="158" width="12" height="3" fill="#22c55e" />
+    <rect x="110" y="158" width="16" height="3" fill="#4ade80" />
+    <rect x="136" y="158" width="10" height="3" fill="#22c55e" />
 
-    <!-- Floating / Falling Leaves Effect -->
-    <rect x="44" y="116" width="4" height="4" fill="#34d399" opacity="0.7" />
-    <rect x="168" y="108" width="4" height="4" fill="#10b981" opacity="0.8" />
-    <rect x="156" y="132" width="4" height="4" fill="#34d399" opacity="0.6" />
+    <!-- Floating / Spore Leaves Effect -->
+    <rect x="44" y="116" width="4" height="4" fill="#4ade80" opacity="0.8" />
+    <rect x="168" y="108" width="4" height="4" fill="#22c55e" opacity="0.85" />
+    <rect x="156" y="132" width="4" height="4" fill="#86efac" opacity="0.7" />
   </g>
 
   <!-- Bottom Legend / Status -->
   <g transform="translate(24, 270)">
-    <line x1="0" y1="0" x2="336" y2="0" stroke="#21262d" stroke-width="1" />
-    <circle cx="6" cy="18" r="3.5" fill="#10b981" />
-    <text x="18" y="21" font-size="9.5" fill="#8b949e">
-      HEALTH: <tspan fill="#34d399" font-weight="bold">THRIVING</tspan> | RE-GROWTH: <tspan fill="#e6edf3">DAILY @ 03:00 UTC</tspan>
+    <line x1="0" y1="0" x2="336" y2="0" stroke="#0e3d26" stroke-width="1" />
+    <circle cx="6" cy="18" r="3.5" fill="#4ade80" />
+    <text x="18" y="21" font-size="9.5" fill="#86efac">
+      BIOME: <tspan fill="#4ade80" font-weight="bold">ARCH-FOREST</tspan> | PHOTOSYNTHESIS: <tspan fill="#f0fdf4">ACTIVE</tspan>
     </text>
   </g>
 </svg>

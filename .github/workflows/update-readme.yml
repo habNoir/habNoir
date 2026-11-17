@@ -1,9 +1,9 @@
-name: Update Latest Repos in README
+name: Update Forest Graph & Repos in README
 
 on:
   schedule:
-    - cron: '0 */12 * * *' # Runs every 12 hours
-  workflow_dispatch:        # Allows manual trigger anytime
+    - cron: '0 */6 * * *' # Runs every 6 hours
+  workflow_dispatch:       # Allows manual trigger anytime
   push:
     branches:
       - main
@@ -13,7 +13,7 @@ permissions:
   contents: write
 
 jobs:
-  update-repos:
+  sync-ecosystem:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repository
@@ -24,6 +24,11 @@ jobs:
         with:
           node-version: '20'
 
+      - name: Generate Forest Tree Contribution Graph
+        env:
+          GH_USERNAME: ${{ github.repository_owner }}
+        run: node scripts/generate-forest-graph.js
+
       - name: Run Repository Auto-Updater Script
         env:
           GH_USERNAME: ${{ github.repository_owner }}
@@ -33,5 +38,5 @@ jobs:
       - name: Commit & Push Changes
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          commit_message: "chore(readme): auto-update recent repositories list [skip ci]"
-          file_pattern: README.md
+          commit_message: "chore(nature): auto-regenerate forest tree graph & update repo showcase [skip ci]"
+          file_pattern: "README.md assets/forest-graph.svg"
