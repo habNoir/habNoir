@@ -1,0 +1,22 @@
+name: Git-Bonsai Generator
+
+on:
+  schedule:
+    - cron: '0 3 * * *' # Grows daily at 03:00 UTC
+  workflow_dispatch:     # Allows manual trigger
+
+permissions:
+  contents: write
+
+jobs:
+  grow:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Grow Bonsai Tree from Git Commits
+        uses: egorthinks/git-bonsai@v1
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          username: ${{ github.repository_owner }}
