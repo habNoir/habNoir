@@ -1,4 +1,4 @@
-name: Update Forest Graph, Stats & Repos
+name: Update Forest Graph, 3D Voxel, Stats & Repos
 
 on:
   schedule:
@@ -24,6 +24,11 @@ jobs:
         with:
           node-version: '20'
 
+      - name: Generate 3D Isometric Voxel Forest Graph
+        env:
+          GH_USERNAME: ${{ github.repository_owner }}
+        run: node scripts/generate-profile-3d.js
+
       - name: Generate Forest Tree Contribution Graph
         env:
           GH_USERNAME: ${{ github.repository_owner }}
@@ -44,5 +49,5 @@ jobs:
       - name: Commit & Push Changes
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          commit_message: "chore(nature): auto-regenerate forest ecosystem assets [skip ci]"
-          file_pattern: "README.md assets/forest-graph.svg assets/nature-stats.svg"
+          commit_message: "chore(nature): auto-regenerate forest ecosystem assets & 3d landscape [skip ci]"
+          file_pattern: "README.md assets/forest-graph.svg assets/nature-stats.svg profile-3d-contrib/*"

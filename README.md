@@ -56,25 +56,19 @@
 
 ---
 
-### `[0x03]` // FOREST CONTRIBUTION TREE GRAPH
+### `[0x03]` // 3D ISOMETRIC FOREST & CONTRIBUTION GRAPH
 
-> *Setiap kotak kontribusi digantikan oleh pohon piksel hidup di atas kanvas tanah hutan Arch Linux. Semakin banyak commit dalam sehari, semakin rimbun dan tinggi pohon yang tumbuh (Dormant → Sapling → Thriving Pine → Ancient Oak).*
+> *Lanskap 3D Isometrik tanah hutan Arch Linux. Setiap petak kontribusi berdiri di atas pedestal blok lumut voxel yang di puncaknya tumbuh pohon cemara piksel dengan morfologi konsisten (Tier 1 → Tier 2 → Tier 3 → Tier 4).*
 
 <div align="center">
 
-<!-- Pure Custom Generated Forest Tree Graph (Updated by GitHub Actions) -->
+<!-- 3D Animated Isometric Forest Grove -->
+<img src="./profile-3d-contrib/profile-green-animate.svg" width="100%" alt="3D Isometric Green Voxel Forest" />
+
+<br/><br/>
+
+<!-- 52-Week Stepped Pine Contribution Grid -->
 <img src="./assets/forest-graph.svg" width="100%" alt="habNoir Nature Forest Contribution Tree Graph" />
-
-<br/>
-
-<!-- Optional 3D Isometric Green Terrain (Generated via .github/workflows/profile-3d.yml) -->
-<details>
-<summary><b>📐 View 3D Isometric Green City/Terrain Blocks (Click to expand)</b></summary>
-<br/>
-<p align="center">
-  <img src="./profile-3d-contrib/profile-green-animate.svg" width="100%" alt="3D Isometric Green Contrib Terrain" onerror="this.src='./output/bonsai.svg'; this.width='360';" />
-</p>
-</details>
 
 </div>
 
@@ -89,7 +83,7 @@
 <!-- REPOS-LIST:START -->
 | 📦 Project / Repository | 📝 Focus / Description | ⚡ Primary Tech | ⭐ Stars | 🕒 Last Push |
 | :--- | :--- | :---: | :---: | :---: |
-| **[`habNoir / vibe-motion-lyrics`](https://github.com/habNoir/vibe-motion-lyrics)** | 16:9 VS Code kinetic typography lyrics video studio with auto-sync AI backend (React JS + Vite) | `HTML` | `—` | `25m ago` |
+| **[`habNoir / vibe-motion-lyrics`](https://github.com/habNoir/vibe-motion-lyrics)** | 16:9 VS Code kinetic typography lyrics video studio with auto-sync AI backend (React JS + Vite) | `HTML` | `—` | `30m ago` |
 | **[`habNoir / marimo`](https://github.com/habNoir/marimo)** | *No description provided* | 🟨 JavaScript | `★ 2` | `1mo ago` |
 | **[`habNoir / NotAFK-HAB`](https://github.com/habNoir/NotAFK-HAB)** | *No description provided* | 🔵 C++ | `—` | `5mo ago` |
 | **[`habNoir / habNoir.github.io`](https://github.com/habNoir/habNoir.github.io)** | *No description provided* | `HTML` | `—` | `9mo ago` |

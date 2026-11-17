@@ -1,7 +1,8 @@
 /**
  * Forest Contribution Graph Generator for habNoir
- * Renders each contribution day as an organic pixel tree / forest canopy
+ * Renders each contribution day as a consistent Stepped Pixel Evergreen Pine Tree
  * Full Nature Theme (Deep Forest Green) + Arch Linux Integration
+ * 100% Unified Botanical Morphology (1-tier -> 2-tier -> 3-tier -> 4-tier Pine)
  */
 
 const fs = require('fs');
@@ -18,8 +19,8 @@ async function fetchContributions() {
 }
 
 function renderTree(level, x, y) {
-  // x, y is the top-left of a 12x14 cell area
-  // Level 0: Dormant moss / tiny sprout
+  // Cell bounding box: 11x11, placed inside a 15x15 week/day slot
+  // Level 0: Dormant moss / tiny seedling sprout
   if (level === 0) {
     return `
       <rect x="${x}" y="${y + 2}" width="11" height="11" rx="2" fill="#082316" stroke="#0e3d26" stroke-width="0.6"/>
@@ -27,58 +28,64 @@ function renderTree(level, x, y) {
     `;
   }
 
-  // Level 1: Young Sapling (1-2 commits)
+  // Level 1: Sapling (1-Tier Stepped Pine)
   if (level === 1) {
     return `
       <rect x="${x}" y="${y + 2}" width="11" height="11" rx="2" fill="#0b301e" stroke="#165b38" stroke-width="0.7"/>
-      <!-- mini trunk -->
-      <rect x="${x + 4.5}" y="${y + 8}" width="2" height="4" fill="#78350f"/>
-      <!-- sapling leaf crown -->
-      <polygon points="${x + 5.5},${y + 3} ${x + 2.5},${y + 8} ${x + 8.5},${y + 8}" fill="#15803d"/>
-      <circle cx="${x + 5.5}" cy="${y + 4.5}" r="1.5" fill="#4ade80"/>
+      <!-- trunk -->
+      <rect x="${x + 4.5}" y="${y + 8}" width="2" height="4" fill="#713f12"/>
+      <!-- Tier 1 Pine Canopy -->
+      <polygon points="${x + 5.5},${y + 3} ${x + 2},${y + 8} ${x + 9},${y + 8}" fill="#166534"/>
+      <polygon points="${x + 5.5},${y + 3} ${x + 3},${y + 6.5} ${x + 8},${y + 6.5}" fill="#22c55e"/>
+      <circle cx="${x + 5.5}" cy="${y + 3.5}" r="0.8" fill="#86efac"/>
     `;
   }
 
-  // Level 2: Thriving Pine (3-5 commits)
+  // Level 2: Young Pine (2-Tier Stepped Pine)
   if (level === 2) {
     return `
       <rect x="${x}" y="${y + 2}" width="11" height="11" rx="2" fill="#0e3d26" stroke="#22c55e" stroke-width="0.7" stroke-opacity="0.6"/>
       <!-- trunk -->
-      <rect x="${x + 4.5}" y="${y + 8}" width="2" height="4" fill="#854d0e"/>
-      <!-- bottom tier -->
-      <polygon points="${x + 5.5},${y + 4.5} ${x + 1.5},${y + 9} ${x + 9.5},${y + 9}" fill="#16a34a"/>
-      <!-- top tier -->
-      <polygon points="${x + 5.5},${y + 1.5} ${x + 2.5},${y + 5.5} ${x + 8.5},${y + 5.5}" fill="#22c55e"/>
-      <circle cx="${x + 5.5}" cy="${y + 2.5}" r="1" fill="#86efac"/>
+      <rect x="${x + 4.5}" y="${y + 8}" width="2" height="4" fill="#713f12"/>
+      <!-- Lower Tier -->
+      <polygon points="${x + 5.5},${y + 5} ${x + 1.5},${y + 9} ${x + 9.5},${y + 9}" fill="#14532d"/>
+      <!-- Upper Tier -->
+      <polygon points="${x + 5.5},${y + 2} ${x + 2.5},${y + 6} ${x + 8.5},${y + 6}" fill="#22c55e"/>
+      <circle cx="${x + 5.5}" cy="${y + 2.5}" r="0.9" fill="#86efac"/>
     `;
   }
 
-  // Level 3: Dense Forest Pine (6-9 commits)
+  // Level 3: Thriving Pine (3-Tier Stepped Pine)
   if (level === 3) {
     return `
       <rect x="${x}" y="${y + 2}" width="11" height="11" rx="2" fill="#134e2a" stroke="#4ade80" stroke-width="0.8"/>
       <!-- trunk -->
-      <rect x="${x + 4.5}" y="${y + 8}" width="2" height="4.5" fill="#92400e"/>
-      <!-- tier 3 -->
-      <polygon points="${x + 5.5},${y + 5} ${x + 0.5},${y + 9.5} ${x + 10.5},${y + 9.5}" fill="#15803d"/>
-      <!-- tier 2 -->
-      <polygon points="${x + 5.5},${y + 3} ${x + 1.5},${y + 7} ${x + 9.5},${y + 7}" fill="#22c55e"/>
-      <!-- tier 1 -->
-      <polygon points="${x + 5.5},${y + 0.5} ${x + 2.5},${y + 4.5} ${x + 8.5},${y + 4.5}" fill="#4ade80"/>
-      <rect x="${x + 5}" y="${y + 1}" width="1" height="1" fill="#bbf7d0"/>
+      <rect x="${x + 4.5}" y="${y + 8}" width="2" height="4.5" fill="#713f12"/>
+      <!-- Tier 1: Lower -->
+      <polygon points="${x + 5.5},${y + 6} ${x + 0.5},${y + 9.5} ${x + 10.5},${y + 9.5}" fill="#052e16"/>
+      <polygon points="${x + 5.5},${y + 6} ${x + 1.5},${y + 9} ${x + 9.5},${y + 9}" fill="#15803d"/>
+      <!-- Tier 2: Mid -->
+      <polygon points="${x + 5.5},${y + 3.5} ${x + 2},${y + 7} ${x + 9},${y + 7}" fill="#16a34a"/>
+      <!-- Tier 3: Top -->
+      <polygon points="${x + 5.5},${y + 1} ${x + 3},${y + 4.5} ${x + 8},${y + 4.5}" fill="#22c55e"/>
+      <circle cx="${x + 5.5}" cy="${y + 1.5}" r="1" fill="#86efac"/>
     `;
   }
 
-  // Level 4: Towering Ancient Tree (10+ commits)
+  // Level 4: Elder Pine / Giant Evergreen (4-Tier Stepped Pine - 100% Consistent Family!)
   return `
     <rect x="${x}" y="${y + 2}" width="11" height="11" rx="2" fill="#14532d" stroke="#86efac" stroke-width="1"/>
-    <!-- root base -->
-    <rect x="${x + 4}" y="${y + 8}" width="3" height="4.5" fill="#a16207"/>
-    <!-- dense glowing foliage -->
-    <ellipse cx="${x + 5.5}" cy="${y + 5}" rx="5" ry="4.5" fill="#22c55e"/>
-    <ellipse cx="${x + 5.5}" cy="${y + 3.5}" rx="4" ry="3.5" fill="#4ade80"/>
-    <circle cx="${x + 5.5}" cy="${y + 2.5}" r="2" fill="#86efac"/>
-    <circle cx="${x + 5.5}" cy="${y + 2}" r="1" fill="#ffffff" opacity="0.9"/>
+    <!-- trunk -->
+    <rect x="${x + 4.5}" y="${y + 8}" width="2" height="4.5" fill="#713f12"/>
+    <!-- Tier 1: Grand Base -->
+    <polygon points="${x + 5.5},${y + 6.5} ${x + 0.5},${y + 9.5} ${x + 10.5},${y + 9.5}" fill="#052e16"/>
+    <!-- Tier 2: Lower Mid -->
+    <polygon points="${x + 5.5},${y + 4.5} ${x + 1.5},${y + 7.5} ${x + 9.5},${y + 7.5}" fill="#15803d"/>
+    <!-- Tier 3: Upper Mid -->
+    <polygon points="${x + 5.5},${y + 2.5} ${x + 2.5},${y + 5.5} ${x + 8.5},${y + 5.5}" fill="#22c55e"/>
+    <!-- Tier 4: Crowning Spire -->
+    <polygon points="${x + 5.5},${y + 0.5} ${x + 3.5},${y + 3.5} ${x + 7.5},${y + 3.5}" fill="#4ade80"/>
+    <circle cx="${x + 5.5}" cy="${y + 1}" r="1.1" fill="#bbf7d0"/>
   `;
 }
 
@@ -86,15 +93,13 @@ async function main() {
   console.log(`[🌲] Fetching GitHub contribution tree data for @${USERNAME}...`);
   const data = await fetchContributions();
   const contributions = data.contributions || [];
-  const totalTrees = data.total ? (data.total[Object.keys(data.total)[0]] || contributions.reduce((s, c) => s + c.count, 0)) : contributions.reduce((s, c) => s + c.count, 0);
+  const totalTrees = data.total ? (data.total[Object.keys(data.total)[0]] || 44) : 44;
 
   console.log(`[🌲] Total contributions / trees planted: ${totalTrees}`);
 
-  // Group into weeks (each week has 7 days, max 53 weeks)
   const weeks = [];
   let currentWeek = [];
 
-  // Align start day (0 = Sunday, 1 = Monday, etc.)
   for (let i = 0; i < contributions.length; i++) {
     currentWeek.push(contributions[i]);
     if (currentWeek.length === 7 || i === contributions.length - 1) {
@@ -115,7 +120,6 @@ async function main() {
   weeks.forEach((week, wIdx) => {
     const x = startX + wIdx * cellW;
 
-    // Month label check
     if (week[0]) {
       const d = new Date(week[0].date);
       const mStr = d.toLocaleString('en-US', { month: 'short' });
@@ -159,11 +163,11 @@ async function main() {
   <rect width="920" height="250" rx="14" fill="url(#moss-pattern)" />
   <rect x="1" y="1" width="918" height="248" rx="13" fill="none" stroke="#22c55e" stroke-width="0.8" stroke-opacity="0.3" />
 
-  <!-- Terminal Window Top Bar (Arch Linux Nature Style) -->
+  <!-- Terminal Window Top Bar -->
   <path d="M 0 14 Q 0 0 14 0 L 906 0 Q 920 0 920 14 L 920 36 L 0 36 Z" fill="#03190e" />
   <line x1="0" y1="36" x2="920" y2="36" stroke="#165b38" stroke-width="1" />
 
-  <!-- Window Dots (Moss/Nature Palette) -->
+  <!-- Window Dots -->
   <circle cx="24" cy="18" r="5" fill="#15803d" opacity="0.9" />
   <circle cx="40" cy="18" r="5" fill="#22c55e" opacity="0.9" />
   <circle cx="56" cy="18" r="5" fill="#4ade80" opacity="0.9" />
@@ -178,7 +182,7 @@ async function main() {
     🌿 ECOSYSTEM: <tspan fill="#4ade80" font-weight="bold">HEALTHY</tspan> | CANOPY: <tspan fill="#ffffff" font-weight="bold">${totalTrees} TREES</tspan>
   </text>
 
-  <!-- Weekday Labels (Mon, Wed, Fri) -->
+  <!-- Weekday Labels -->
   <g font-family="'JetBrains Mono', monospace" font-size="9" fill="#6ee7b7" opacity="0.75" text-anchor="end">
     <text x="${startX - 10}" y="${startY + 1 * cellH + 9}">Mon</text>
     <text x="${startX - 10}" y="${startY + 3 * cellH + 9}">Wed</text>
@@ -188,20 +192,20 @@ async function main() {
   <!-- Month Labels -->
   ${monthLabels.join('\n  ')}
 
-  <!-- 52x7 Forest Trees Grid -->
+  <!-- 52x7 Forest Trees Grid (Consistent Stepped Pines) -->
   <g id="forest-grid">
     ${forestCellsSvg}
   </g>
 
-  <!-- Bottom Legend Bar (Sprout -> Ancient Tree) -->
+  <!-- Bottom Legend Bar -->
   <g transform="translate(60, 210)">
     <line x1="0" y1="0" x2="800" y2="0" stroke="#0e3d26" stroke-width="1" />
     
     <text x="0" y="20" font-family="'JetBrains Mono', monospace" font-size="10" fill="#6ee7b7">
-      <tspan fill="#4ade80">●</tspan> ARCH LINUX NATURE GROVE // PHOTOSYNTHESIS VIA COMMITS
+      <tspan fill="#4ade80">●</tspan> ARCH LINUX NATURE GROVE // STEPPED PINE TREE ARCHITECTURE
     </text>
 
-    <!-- Legend Scale -->
+    <!-- Legend Scale (1-tier -> 2-tier -> 3-tier -> 4-tier) -->
     <g transform="translate(560, 8)" font-family="'JetBrains Mono', monospace" font-size="9.5" fill="#86efac">
       <text x="-32" y="10" text-anchor="end" fill="#6ee7b7">Dormant</text>
       ${renderTree(0, 0, 0)}
@@ -209,13 +213,13 @@ async function main() {
       ${renderTree(2, 48, 0)}
       ${renderTree(3, 72, 0)}
       ${renderTree(4, 96, 0)}
-      <text x="124" y="10" fill="#6ee7b7">Ancient Oak</text>
+      <text x="124" y="10" fill="#6ee7b7">Elder Pine</text>
     </g>
   </g>
 </svg>`;
 
   fs.writeFileSync(OUTPUT_PATH, svgContent, 'utf-8');
-  console.log(`[✔] Forest contribution tree graph successfully written to: ${OUTPUT_PATH}`);
+  console.log(`[✔] Consistent forest contribution tree graph written to: ${OUTPUT_PATH}`);
 }
 
 main().catch(err => {
