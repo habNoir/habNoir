@@ -47,7 +47,7 @@
 
   <!-- Forest Telemetry / Metadata Right -->
   <text x="895" y="22" text-anchor="end" font-family="'JetBrains Mono', monospace" font-size="10" fill="#6ee7b7" opacity="0.9">
-    🌿 ECOSYSTEM: <tspan fill="#4ade80" font-weight="bold">HEALTHY</tspan> | CANOPY: <tspan fill="#ffffff" font-weight="bold">67 TREES</tspan>
+    🌿 ECOSYSTEM: <tspan fill="#4ade80" font-weight="bold">HEALTHY</tspan> | CANOPY: <tspan fill="#ffffff" font-weight="bold">68 TREES</tspan>
   </text>
 
   <!-- Weekday Labels -->
@@ -1284,6 +1284,9 @@
     <polygon points="845.5,118.5 843.5,121.5 847.5,121.5" fill="#4ade80"/>
     <circle cx="845.5" cy="119" r="1.1" fill="#bbf7d0"/>
   
+      <rect x="840" y="135" width="11" height="11" rx="2" fill="#161b22" stroke="#21262d" stroke-width="0.8"/>
+      <circle cx="845.5" cy="140.5" r="1" fill="#165b38" opacity="0.6"/>
+    
   </g>
 
   <!-- Bottom Legend Bar -->
