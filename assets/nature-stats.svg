@@ -48,21 +48,21 @@
     <g transform="translate(0, 0)">
       <rect width="166" height="54" rx="6" fill="#161b22" stroke="#165b38" stroke-width="1" />
       <text x="12" y="20" font-size="9" fill="#86efac">🌲 CONTRIBUTIONS</text>
-      <text x="12" y="42" font-size="17" font-weight="900" fill="#f0fdf4">83 <tspan font-size="10" font-weight="normal" fill="#4ade80">trees</tspan></text>
+      <text x="12" y="42" font-size="17" font-weight="900" fill="#f0fdf4">87 <tspan font-size="10" font-weight="normal" fill="#4ade80">trees</tspan></text>
     </g>
 
     <!-- Card 2: Public Repos -->
     <g transform="translate(178, 0)">
       <rect width="166" height="54" rx="6" fill="#161b22" stroke="#165b38" stroke-width="1" />
       <text x="12" y="20" font-size="9" fill="#86efac">📦 PUBLIC REPOS</text>
-      <text x="12" y="42" font-size="17" font-weight="900" fill="#f0fdf4">10 <tspan font-size="10" font-weight="normal" fill="#4ade80">active</tspan></text>
+      <text x="12" y="42" font-size="17" font-weight="900" fill="#f0fdf4">11 <tspan font-size="10" font-weight="normal" fill="#4ade80">active</tspan></text>
     </g>
 
     <!-- Card 3: Stars Earned -->
     <g transform="translate(0, 62)">
       <rect width="166" height="54" rx="6" fill="#161b22" stroke="#165b38" stroke-width="1" />
       <text x="12" y="20" font-size="9" fill="#86efac">⭐ TOTAL STARS</text>
-      <text x="12" y="42" font-size="17" font-weight="900" fill="#f0fdf4">4 <tspan font-size="10" font-weight="normal" fill="#4ade80">stars</tspan></text>
+      <text x="12" y="42" font-size="17" font-weight="900" fill="#f0fdf4">5 <tspan font-size="10" font-weight="normal" fill="#4ade80">stars</tspan></text>
     </g>
 
     <!-- Card 4: Forks -->
