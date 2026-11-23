@@ -63,12 +63,12 @@
 <!-- REPOS-LIST:START -->
 | 📦 Project / Repository | 📝 Focus / Description | ⚡ Primary Tech | ⭐ Stars | 🕒 Last Push |
 | :--- | :--- | :---: | :---: | :---: |
-| **[`habNoir / device_tree_cn7c`](https://github.com/habNoir/device_tree_cn7c)** | OrangeFox / TWRP Device Tree for TECNO CAMON 50 Pro 5G & TECNO CAMON 50 Ultra 5G (TECNO-CN7c / mt6878, 12GB RAM / 512GB ROM, CN7c-16.3.0.160SP03) | `Makefile` | `—` | `3m ago` |
-| **[`habNoir / habNoir-Clean`](https://github.com/habNoir/habNoir-Clean)** | Pembersih cache bertahap & folder sampah 3 lapis Android 12-17 (100% offline, 0 internet permission, ~2.56 MB, GPL-3.0-or-later) | 🟣 Kotlin | `★ 1` | `1d ago` |
+| **[`habNoir / ofox_tecno_cn7c`](https://github.com/habNoir/ofox_tecno_cn7c)** | [UNOFFICIAL BUILD] OrangeFox Recovery R12.0 (fox_16.0) for TECNO CAMON 50 Pro 5G & Ultra 5G (TECNO-CN7c / mt6878 — All Variants 8/256, 12/256, 12/512GB) \| Maintainer: habNoir | `Makefile` | `—` | `10h ago` |
+| **[`habNoir / device_tree_cn7c`](https://github.com/habNoir/device_tree_cn7c)** | Full Android 16 Device Tree for TECNO CAMON 50 Pro 5G & TECNO CAMON 50 Ultra 5G (TECNO-CN7c / mt6878 — All Variants 8/256GB, 12/256GB, 12/512GB) | `Makefile` | `—` | `11h ago` |
+| **[`habNoir / habNoir-Clean`](https://github.com/habNoir/habNoir-Clean)** | Pembersih cache bertahap & folder sampah 3 lapis Android 12-17 (100% offline, 0 internet permission, ~2.56 MB, GPL-3.0-or-later) | 🟣 Kotlin | `★ 1` | `2d ago` |
 | **[`habNoir / Porto`](https://github.com/habNoir/Porto)** | Bespoke Portfolio of habNoir (Alwahab Dzulikroom Butudoka) — Next.js 16, React 19, TypeScript, Tailwind CSS v4 | 🔷 TypeScript | `—` | `3d ago` |
 | **[`habNoir / vibe-motion-lyrics`](https://github.com/habNoir/vibe-motion-lyrics)** | 16:9 VS Code kinetic typography lyrics video studio with auto-sync AI backend (React JS + Vite) | `HTML` | `—` | `6d ago` |
 | **[`habNoir / marimo`](https://github.com/habNoir/marimo)** | *No description provided* | 🟨 JavaScript | `★ 2` | `1mo ago` |
-| **[`habNoir / NotAFK-HAB`](https://github.com/habNoir/NotAFK-HAB)** | *No description provided* | 🔵 C++ | `—` | `5mo ago` |
 
 <!-- REPOS-LIST:END -->
 
