@@ -47,7 +47,7 @@
 
   <!-- Forest Telemetry / Metadata Right -->
   <text x="895" y="22" text-anchor="end" font-family="'JetBrains Mono', monospace" font-size="10" fill="#6ee7b7" opacity="0.9">
-    🌿 ECOSYSTEM: <tspan fill="#4ade80" font-weight="bold">HEALTHY</tspan> | CANOPY: <tspan fill="#ffffff" font-weight="bold">99 TREES</tspan>
+    🌿 ECOSYSTEM: <tspan fill="#4ade80" font-weight="bold">HEALTHY</tspan> | CANOPY: <tspan fill="#ffffff" font-weight="bold">103 TREES</tspan>
   </text>
 
   <!-- Weekday Labels -->
@@ -330,17 +330,14 @@
       <rect x="240" y="90" width="11" height="11" rx="2" fill="#161b22" stroke="#21262d" stroke-width="0.8"/>
       <circle cx="245.5" cy="95.5" r="1" fill="#165b38" opacity="0.6"/>
     
-      <rect x="240" y="105" width="11" height="11" rx="2" fill="#134e2a" stroke="#4ade80" stroke-width="0.9"/>
+      <rect x="240" y="105" width="11" height="11" rx="2" fill="#0f3322" stroke="#22c55e" stroke-width="0.8" stroke-opacity="0.8"/>
       <!-- trunk -->
-      <rect x="244.5" y="111" width="2" height="4.5" fill="#713f12"/>
-      <!-- Tier 1: Lower -->
-      <polygon points="245.5,109 240.5,112.5 250.5,112.5" fill="#052e16"/>
-      <polygon points="245.5,109 241.5,112 249.5,112" fill="#15803d"/>
-      <!-- Tier 2: Mid -->
-      <polygon points="245.5,106.5 242,110 249,110" fill="#16a34a"/>
-      <!-- Tier 3: Top -->
-      <polygon points="245.5,104 243,107.5 248,107.5" fill="#22c55e"/>
-      <circle cx="245.5" cy="104.5" r="1" fill="#86efac"/>
+      <rect x="244.5" y="111" width="2" height="4" fill="#713f12"/>
+      <!-- Lower Tier -->
+      <polygon points="245.5,108 241.5,112 249.5,112" fill="#14532d"/>
+      <!-- Upper Tier -->
+      <polygon points="245.5,105 242.5,109 248.5,109" fill="#22c55e"/>
+      <circle cx="245.5" cy="105.5" r="0.9" fill="#86efac"/>
     
       <rect x="240" y="120" width="11" height="11" rx="2" fill="#161b22" stroke="#21262d" stroke-width="0.8"/>
       <circle cx="245.5" cy="125.5" r="1" fill="#165b38" opacity="0.6"/>
@@ -662,14 +659,13 @@
       <rect x="465" y="105" width="11" height="11" rx="2" fill="#161b22" stroke="#21262d" stroke-width="0.8"/>
       <circle cx="470.5" cy="110.5" r="1" fill="#165b38" opacity="0.6"/>
     
-      <rect x="465" y="120" width="11" height="11" rx="2" fill="#0f3322" stroke="#22c55e" stroke-width="0.8" stroke-opacity="0.8"/>
+      <rect x="465" y="120" width="11" height="11" rx="2" fill="#0d261a" stroke="#165b38" stroke-width="0.8"/>
       <!-- trunk -->
       <rect x="469.5" y="126" width="2" height="4" fill="#713f12"/>
-      <!-- Lower Tier -->
-      <polygon points="470.5,123 466.5,127 474.5,127" fill="#14532d"/>
-      <!-- Upper Tier -->
-      <polygon points="470.5,120 467.5,124 473.5,124" fill="#22c55e"/>
-      <circle cx="470.5" cy="120.5" r="0.9" fill="#86efac"/>
+      <!-- Tier 1 Pine Canopy -->
+      <polygon points="470.5,121 467,126 474,126" fill="#166534"/>
+      <polygon points="470.5,121 468,124.5 473,124.5" fill="#22c55e"/>
+      <circle cx="470.5" cy="121.5" r="0.8" fill="#86efac"/>
     
       <rect x="465" y="135" width="11" height="11" rx="2" fill="#161b22" stroke="#21262d" stroke-width="0.8"/>
       <circle cx="470.5" cy="140.5" r="1" fill="#165b38" opacity="0.6"/>
@@ -965,31 +961,27 @@
       <rect x="675" y="120" width="11" height="11" rx="2" fill="#161b22" stroke="#21262d" stroke-width="0.8"/>
       <circle cx="680.5" cy="125.5" r="1" fill="#165b38" opacity="0.6"/>
     
-      <rect x="675" y="135" width="11" height="11" rx="2" fill="#134e2a" stroke="#4ade80" stroke-width="0.9"/>
+      <rect x="675" y="135" width="11" height="11" rx="2" fill="#0f3322" stroke="#22c55e" stroke-width="0.8" stroke-opacity="0.8"/>
       <!-- trunk -->
-      <rect x="679.5" y="141" width="2" height="4.5" fill="#713f12"/>
-      <!-- Tier 1: Lower -->
-      <polygon points="680.5,139 675.5,142.5 685.5,142.5" fill="#052e16"/>
-      <polygon points="680.5,139 676.5,142 684.5,142" fill="#15803d"/>
-      <!-- Tier 2: Mid -->
-      <polygon points="680.5,136.5 677,140 684,140" fill="#16a34a"/>
-      <!-- Tier 3: Top -->
-      <polygon points="680.5,134 678,137.5 683,137.5" fill="#22c55e"/>
-      <circle cx="680.5" cy="134.5" r="1" fill="#86efac"/>
+      <rect x="679.5" y="141" width="2" height="4" fill="#713f12"/>
+      <!-- Lower Tier -->
+      <polygon points="680.5,138 676.5,142 684.5,142" fill="#14532d"/>
+      <!-- Upper Tier -->
+      <polygon points="680.5,135 677.5,139 683.5,139" fill="#22c55e"/>
+      <circle cx="680.5" cy="135.5" r="0.9" fill="#86efac"/>
     
-    <rect x="675" y="150" width="11" height="11" rx="2" fill="#14532d" stroke="#86efac" stroke-width="1.1"/>
-    <!-- trunk -->
-    <rect x="679.5" y="156" width="2" height="4.5" fill="#713f12"/>
-    <!-- Tier 1: Grand Base -->
-    <polygon points="680.5,154.5 675.5,157.5 685.5,157.5" fill="#052e16"/>
-    <!-- Tier 2: Lower Mid -->
-    <polygon points="680.5,152.5 676.5,155.5 684.5,155.5" fill="#15803d"/>
-    <!-- Tier 3: Upper Mid -->
-    <polygon points="680.5,150.5 677.5,153.5 683.5,153.5" fill="#22c55e"/>
-    <!-- Tier 4: Crowning Spire -->
-    <polygon points="680.5,148.5 678.5,151.5 682.5,151.5" fill="#4ade80"/>
-    <circle cx="680.5" cy="149" r="1.1" fill="#bbf7d0"/>
-  
+      <rect x="675" y="150" width="11" height="11" rx="2" fill="#134e2a" stroke="#4ade80" stroke-width="0.9"/>
+      <!-- trunk -->
+      <rect x="679.5" y="156" width="2" height="4.5" fill="#713f12"/>
+      <!-- Tier 1: Lower -->
+      <polygon points="680.5,154 675.5,157.5 685.5,157.5" fill="#052e16"/>
+      <polygon points="680.5,154 676.5,157 684.5,157" fill="#15803d"/>
+      <!-- Tier 2: Mid -->
+      <polygon points="680.5,151.5 677,155 684,155" fill="#16a34a"/>
+      <!-- Tier 3: Top -->
+      <polygon points="680.5,149 678,152.5 683,152.5" fill="#22c55e"/>
+      <circle cx="680.5" cy="149.5" r="1" fill="#86efac"/>
+    
       <rect x="675" y="165" width="11" height="11" rx="2" fill="#161b22" stroke="#21262d" stroke-width="0.8"/>
       <circle cx="680.5" cy="170.5" r="1" fill="#165b38" opacity="0.6"/>
     
@@ -1097,14 +1089,13 @@
       <rect x="735" y="165" width="11" height="11" rx="2" fill="#161b22" stroke="#21262d" stroke-width="0.8"/>
       <circle cx="740.5" cy="170.5" r="1" fill="#165b38" opacity="0.6"/>
     
-      <rect x="735" y="180" width="11" height="11" rx="2" fill="#0f3322" stroke="#22c55e" stroke-width="0.8" stroke-opacity="0.8"/>
+      <rect x="735" y="180" width="11" height="11" rx="2" fill="#0d261a" stroke="#165b38" stroke-width="0.8"/>
       <!-- trunk -->
       <rect x="739.5" y="186" width="2" height="4" fill="#713f12"/>
-      <!-- Lower Tier -->
-      <polygon points="740.5,183 736.5,187 744.5,187" fill="#14532d"/>
-      <!-- Upper Tier -->
-      <polygon points="740.5,180 737.5,184 743.5,184" fill="#22c55e"/>
-      <circle cx="740.5" cy="180.5" r="0.9" fill="#86efac"/>
+      <!-- Tier 1 Pine Canopy -->
+      <polygon points="740.5,181 737,186 744,186" fill="#166534"/>
+      <polygon points="740.5,181 738,184.5 743,184.5" fill="#22c55e"/>
+      <circle cx="740.5" cy="181.5" r="0.8" fill="#86efac"/>
     
       <rect x="750" y="90" width="11" height="11" rx="2" fill="#0d261a" stroke="#165b38" stroke-width="0.8"/>
       <!-- trunk -->
@@ -1120,14 +1111,13 @@
       <rect x="750" y="120" width="11" height="11" rx="2" fill="#161b22" stroke="#21262d" stroke-width="0.8"/>
       <circle cx="755.5" cy="125.5" r="1" fill="#165b38" opacity="0.6"/>
     
-      <rect x="750" y="135" width="11" height="11" rx="2" fill="#0f3322" stroke="#22c55e" stroke-width="0.8" stroke-opacity="0.8"/>
+      <rect x="750" y="135" width="11" height="11" rx="2" fill="#0d261a" stroke="#165b38" stroke-width="0.8"/>
       <!-- trunk -->
       <rect x="754.5" y="141" width="2" height="4" fill="#713f12"/>
-      <!-- Lower Tier -->
-      <polygon points="755.5,138 751.5,142 759.5,142" fill="#14532d"/>
-      <!-- Upper Tier -->
-      <polygon points="755.5,135 752.5,139 758.5,139" fill="#22c55e"/>
-      <circle cx="755.5" cy="135.5" r="0.9" fill="#86efac"/>
+      <!-- Tier 1 Pine Canopy -->
+      <polygon points="755.5,136 752,141 759,141" fill="#166534"/>
+      <polygon points="755.5,136 753,139.5 758,139.5" fill="#22c55e"/>
+      <circle cx="755.5" cy="136.5" r="0.8" fill="#86efac"/>
     
       <rect x="750" y="150" width="11" height="11" rx="2" fill="#161b22" stroke="#21262d" stroke-width="0.8"/>
       <circle cx="755.5" cy="155.5" r="1" fill="#165b38" opacity="0.6"/>
@@ -1138,19 +1128,18 @@
       <rect x="750" y="180" width="11" height="11" rx="2" fill="#161b22" stroke="#21262d" stroke-width="0.8"/>
       <circle cx="755.5" cy="185.5" r="1" fill="#165b38" opacity="0.6"/>
     
-    <rect x="765" y="90" width="11" height="11" rx="2" fill="#14532d" stroke="#86efac" stroke-width="1.1"/>
-    <!-- trunk -->
-    <rect x="769.5" y="96" width="2" height="4.5" fill="#713f12"/>
-    <!-- Tier 1: Grand Base -->
-    <polygon points="770.5,94.5 765.5,97.5 775.5,97.5" fill="#052e16"/>
-    <!-- Tier 2: Lower Mid -->
-    <polygon points="770.5,92.5 766.5,95.5 774.5,95.5" fill="#15803d"/>
-    <!-- Tier 3: Upper Mid -->
-    <polygon points="770.5,90.5 767.5,93.5 773.5,93.5" fill="#22c55e"/>
-    <!-- Tier 4: Crowning Spire -->
-    <polygon points="770.5,88.5 768.5,91.5 772.5,91.5" fill="#4ade80"/>
-    <circle cx="770.5" cy="89" r="1.1" fill="#bbf7d0"/>
-  
+      <rect x="765" y="90" width="11" height="11" rx="2" fill="#134e2a" stroke="#4ade80" stroke-width="0.9"/>
+      <!-- trunk -->
+      <rect x="769.5" y="96" width="2" height="4.5" fill="#713f12"/>
+      <!-- Tier 1: Lower -->
+      <polygon points="770.5,94 765.5,97.5 775.5,97.5" fill="#052e16"/>
+      <polygon points="770.5,94 766.5,97 774.5,97" fill="#15803d"/>
+      <!-- Tier 2: Mid -->
+      <polygon points="770.5,91.5 767,95 774,95" fill="#16a34a"/>
+      <!-- Tier 3: Top -->
+      <polygon points="770.5,89 768,92.5 773,92.5" fill="#22c55e"/>
+      <circle cx="770.5" cy="89.5" r="1" fill="#86efac"/>
+    
       <rect x="765" y="105" width="11" height="11" rx="2" fill="#161b22" stroke="#21262d" stroke-width="0.8"/>
       <circle cx="770.5" cy="110.5" r="1" fill="#165b38" opacity="0.6"/>
     
@@ -1274,43 +1263,36 @@
     <polygon points="830.5,133.5 828.5,136.5 832.5,136.5" fill="#4ade80"/>
     <circle cx="830.5" cy="134" r="1.1" fill="#bbf7d0"/>
   
-      <rect x="825" y="150" width="11" height="11" rx="2" fill="#134e2a" stroke="#4ade80" stroke-width="0.9"/>
+      <rect x="825" y="150" width="11" height="11" rx="2" fill="#0f3322" stroke="#22c55e" stroke-width="0.8" stroke-opacity="0.8"/>
       <!-- trunk -->
-      <rect x="829.5" y="156" width="2" height="4.5" fill="#713f12"/>
-      <!-- Tier 1: Lower -->
-      <polygon points="830.5,154 825.5,157.5 835.5,157.5" fill="#052e16"/>
-      <polygon points="830.5,154 826.5,157 834.5,157" fill="#15803d"/>
-      <!-- Tier 2: Mid -->
-      <polygon points="830.5,151.5 827,155 834,155" fill="#16a34a"/>
-      <!-- Tier 3: Top -->
-      <polygon points="830.5,149 828,152.5 833,152.5" fill="#22c55e"/>
-      <circle cx="830.5" cy="149.5" r="1" fill="#86efac"/>
+      <rect x="829.5" y="156" width="2" height="4" fill="#713f12"/>
+      <!-- Lower Tier -->
+      <polygon points="830.5,153 826.5,157 834.5,157" fill="#14532d"/>
+      <!-- Upper Tier -->
+      <polygon points="830.5,150 827.5,154 833.5,154" fill="#22c55e"/>
+      <circle cx="830.5" cy="150.5" r="0.9" fill="#86efac"/>
     
-      <rect x="825" y="165" width="11" height="11" rx="2" fill="#134e2a" stroke="#4ade80" stroke-width="0.9"/>
+      <rect x="825" y="165" width="11" height="11" rx="2" fill="#0f3322" stroke="#22c55e" stroke-width="0.8" stroke-opacity="0.8"/>
       <!-- trunk -->
-      <rect x="829.5" y="171" width="2" height="4.5" fill="#713f12"/>
-      <!-- Tier 1: Lower -->
-      <polygon points="830.5,169 825.5,172.5 835.5,172.5" fill="#052e16"/>
-      <polygon points="830.5,169 826.5,172 834.5,172" fill="#15803d"/>
-      <!-- Tier 2: Mid -->
-      <polygon points="830.5,166.5 827,170 834,170" fill="#16a34a"/>
-      <!-- Tier 3: Top -->
-      <polygon points="830.5,164 828,167.5 833,167.5" fill="#22c55e"/>
-      <circle cx="830.5" cy="164.5" r="1" fill="#86efac"/>
+      <rect x="829.5" y="171" width="2" height="4" fill="#713f12"/>
+      <!-- Lower Tier -->
+      <polygon points="830.5,168 826.5,172 834.5,172" fill="#14532d"/>
+      <!-- Upper Tier -->
+      <polygon points="830.5,165 827.5,169 833.5,169" fill="#22c55e"/>
+      <circle cx="830.5" cy="165.5" r="0.9" fill="#86efac"/>
     
-    <rect x="825" y="180" width="11" height="11" rx="2" fill="#14532d" stroke="#86efac" stroke-width="1.1"/>
-    <!-- trunk -->
-    <rect x="829.5" y="186" width="2" height="4.5" fill="#713f12"/>
-    <!-- Tier 1: Grand Base -->
-    <polygon points="830.5,184.5 825.5,187.5 835.5,187.5" fill="#052e16"/>
-    <!-- Tier 2: Lower Mid -->
-    <polygon points="830.5,182.5 826.5,185.5 834.5,185.5" fill="#15803d"/>
-    <!-- Tier 3: Upper Mid -->
-    <polygon points="830.5,180.5 827.5,183.5 833.5,183.5" fill="#22c55e"/>
-    <!-- Tier 4: Crowning Spire -->
-    <polygon points="830.5,178.5 828.5,181.5 832.5,181.5" fill="#4ade80"/>
-    <circle cx="830.5" cy="179" r="1.1" fill="#bbf7d0"/>
-  
+      <rect x="825" y="180" width="11" height="11" rx="2" fill="#134e2a" stroke="#4ade80" stroke-width="0.9"/>
+      <!-- trunk -->
+      <rect x="829.5" y="186" width="2" height="4.5" fill="#713f12"/>
+      <!-- Tier 1: Lower -->
+      <polygon points="830.5,184 825.5,187.5 835.5,187.5" fill="#052e16"/>
+      <polygon points="830.5,184 826.5,187 834.5,187" fill="#15803d"/>
+      <!-- Tier 2: Mid -->
+      <polygon points="830.5,181.5 827,185 834,185" fill="#16a34a"/>
+      <!-- Tier 3: Top -->
+      <polygon points="830.5,179 828,182.5 833,182.5" fill="#22c55e"/>
+      <circle cx="830.5" cy="179.5" r="1" fill="#86efac"/>
+    
       <rect x="840" y="90" width="11" height="11" rx="2" fill="#0f3322" stroke="#22c55e" stroke-width="0.8" stroke-opacity="0.8"/>
       <!-- trunk -->
       <rect x="844.5" y="96" width="2" height="4" fill="#713f12"/>
@@ -1333,6 +1315,15 @@
     <polygon points="845.5,103.5 843.5,106.5 847.5,106.5" fill="#4ade80"/>
     <circle cx="845.5" cy="104" r="1.1" fill="#bbf7d0"/>
   
+      <rect x="840" y="120" width="11" height="11" rx="2" fill="#0f3322" stroke="#22c55e" stroke-width="0.8" stroke-opacity="0.8"/>
+      <!-- trunk -->
+      <rect x="844.5" y="126" width="2" height="4" fill="#713f12"/>
+      <!-- Lower Tier -->
+      <polygon points="845.5,123 841.5,127 849.5,127" fill="#14532d"/>
+      <!-- Upper Tier -->
+      <polygon points="845.5,120 842.5,124 848.5,124" fill="#22c55e"/>
+      <circle cx="845.5" cy="120.5" r="0.9" fill="#86efac"/>
+    
   </g>
 
   <!-- Bottom Legend Bar -->
