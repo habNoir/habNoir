@@ -63,10 +63,10 @@
 <!-- REPOS-LIST:START -->
 | 📦 Project / Repository | 📝 Focus / Description | ⚡ Primary Tech | ⭐ Stars | 🕒 Last Push |
 | :--- | :--- | :---: | :---: | :---: |
-| **[`habNoir / device_tree_cn7c`](https://github.com/habNoir/device_tree_cn7c)** | Full Android 16 Device Tree for TECNO CAMON 50 Pro 5G & Ultra 5G (TECNO-CN7c / mt6878 \| Firmware: CN7c-16.3.0.160SP03(OP005PF001M1) \| All Variants 8/256GB, 12/256GB, 12/512GB) \| Maintainer: habNoir | `Makefile` | `—` | `1d ago` |
-| **[`habNoir / habNoir-Clean`](https://github.com/habNoir/habNoir-Clean)** | Pembersih cache bertahap & folder sampah 3 lapis Android 12-17 (100% offline, 0 internet permission, ~2.56 MB, GPL-3.0-or-later) | 🟣 Kotlin | `★ 1` | `5d ago` |
-| **[`habNoir / Porto`](https://github.com/habNoir/Porto)** | Bespoke Portfolio of habNoir (Alwahab Dzulikroom Butudoka) — Next.js 16, React 19, TypeScript, Tailwind CSS v4 | 🔷 TypeScript | `—` | `6d ago` |
-| **[`habNoir / vibe-motion-lyrics`](https://github.com/habNoir/vibe-motion-lyrics)** | 16:9 VS Code kinetic typography lyrics video studio with auto-sync AI backend (React JS + Vite) | `HTML` | `—` | `9d ago` |
+| **[`habNoir / device_tree_cn7c`](https://github.com/habNoir/device_tree_cn7c)** | Full Android 16 Device Tree for TECNO CAMON 50 Pro 5G & Ultra 5G (TECNO-CN7c / mt6878 \| Firmware: CN7c-16.3.0.160SP03(OP005PF001M1) \| All Variants 8/256GB, 12/256GB, 12/512GB) \| Maintainer: habNoir | `Makefile` | `—` | `2d ago` |
+| **[`habNoir / habNoir-Clean`](https://github.com/habNoir/habNoir-Clean)** | Pembersih cache bertahap & folder sampah 3 lapis Android 12-17 (100% offline, 0 internet permission, ~2.56 MB, GPL-3.0-or-later) | 🟣 Kotlin | `★ 1` | `6d ago` |
+| **[`habNoir / Porto`](https://github.com/habNoir/Porto)** | Bespoke Portfolio of habNoir (Alwahab Dzulikroom Butudoka) — Next.js 16, React 19, TypeScript, Tailwind CSS v4 | 🔷 TypeScript | `—` | `7d ago` |
+| **[`habNoir / vibe-motion-lyrics`](https://github.com/habNoir/vibe-motion-lyrics)** | 16:9 VS Code kinetic typography lyrics video studio with auto-sync AI backend (React JS + Vite) | `HTML` | `—` | `10d ago` |
 | **[`habNoir / marimo`](https://github.com/habNoir/marimo)** | *No description provided* | 🟨 JavaScript | `★ 2` | `1mo ago` |
 | **[`habNoir / NotAFK-HAB`](https://github.com/habNoir/NotAFK-HAB)** | *No description provided* | 🔵 C++ | `—` | `5mo ago` |
 
