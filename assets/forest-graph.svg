@@ -47,7 +47,7 @@
 
   <!-- Forest Telemetry / Metadata Right -->
   <text x="895" y="22" text-anchor="end" font-family="'JetBrains Mono', monospace" font-size="10" fill="#6ee7b7" opacity="0.9">
-    🌿 ECOSYSTEM: <tspan fill="#4ade80" font-weight="bold">HEALTHY</tspan> | CANOPY: <tspan fill="#ffffff" font-weight="bold">104 TREES</tspan>
+    🌿 ECOSYSTEM: <tspan fill="#4ade80" font-weight="bold">HEALTHY</tspan> | CANOPY: <tspan fill="#ffffff" font-weight="bold">105 TREES</tspan>
   </text>
 
   <!-- Weekday Labels -->
@@ -1353,13 +1353,17 @@
       <polygon points="845.5,134 843,137.5 848,137.5" fill="#22c55e"/>
       <circle cx="845.5" cy="134.5" r="1" fill="#86efac"/>
     
-      <rect x="840" y="150" width="11" height="11" rx="2" fill="#0d261a" stroke="#165b38" stroke-width="0.8"/>
+      <rect x="840" y="150" width="11" height="11" rx="2" fill="#0f3322" stroke="#22c55e" stroke-width="0.8" stroke-opacity="0.8"/>
       <!-- trunk -->
       <rect x="844.5" y="156" width="2" height="4" fill="#713f12"/>
-      <!-- Tier 1 Pine Canopy -->
-      <polygon points="845.5,151 842,156 849,156" fill="#166534"/>
-      <polygon points="845.5,151 843,154.5 848,154.5" fill="#22c55e"/>
-      <circle cx="845.5" cy="151.5" r="0.8" fill="#86efac"/>
+      <!-- Lower Tier -->
+      <polygon points="845.5,153 841.5,157 849.5,157" fill="#14532d"/>
+      <!-- Upper Tier -->
+      <polygon points="845.5,150 842.5,154 848.5,154" fill="#22c55e"/>
+      <circle cx="845.5" cy="150.5" r="0.9" fill="#86efac"/>
+    
+      <rect x="840" y="165" width="11" height="11" rx="2" fill="#161b22" stroke="#21262d" stroke-width="0.8"/>
+      <circle cx="845.5" cy="170.5" r="1" fill="#165b38" opacity="0.6"/>
     
   </g>
 
