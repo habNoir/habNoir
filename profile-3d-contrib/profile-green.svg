@@ -43,7 +43,7 @@
 
   <!-- Telemetry Meta -->
   <text x="935" y="22" text-anchor="end" font-size="10" fill="#6ee7b7">
-    🌿 3D VOXEL GROVE // <tspan fill="#f0fdf4" font-weight="bold">107 COMMITS PLANTED</tspan>
+    🌿 3D VOXEL GROVE // <tspan fill="#f0fdf4" font-weight="bold">108 COMMITS PLANTED</tspan>
   </text>
 
   <!-- 3D Voxel Blocks & Trees -->
@@ -197,7 +197,12 @@
         <polygon points="783.2,327.0 778.2,334.0 788.2,334.0" fill="#16a34a"/>
         <polygon points="783.2,322.0 779.7,328.0 786.7,328.0" fill="#4ade80"/>
         <circle cx="783.2" cy="323.0" r="1.8" fill="#bbf7d0"/>
-      </g><g class="iso-block" ><polygon points="785.4,411.2 797.4,418.0 797.4,422.0 785.4,415.2" fill="#0d1117" /><polygon points="797.4,418.0 809.4,411.2 809.4,415.2 797.4,422.0" fill="#12161d" /><polygon points="797.4,404.4 809.4,411.2 797.4,418.0 785.4,411.2" fill="#161b22" stroke="#21262d" stroke-width="0.5" /><circle cx="797.4" cy="411.2" r="1.2" fill="#165b38" opacity="0.6"/></g>
+      </g><g class="iso-block" ><polygon points="785.4,401.2 797.4,408.0 797.4,422.0 785.4,415.2" fill="#092115" /><polygon points="797.4,408.0 809.4,401.2 809.4,415.2 797.4,422.0" fill="#0c2d1c" /><polygon points="797.4,394.4 809.4,401.2 797.4,408.0 785.4,401.2" fill="#0f3823" stroke="#165b38" stroke-width="0.5" />
+        <rect x="796.4" y="397.2" width="2" height="4" fill="#713f12"/>
+        <polygon points="797.4,389.2 792.4,397.2 802.4,397.2" fill="#166534"/>
+        <polygon points="797.4,389.2 793.9,395.2 800.9,395.2" fill="#22c55e"/>
+        <circle cx="797.4" cy="390.2" r="1.2" fill="#86efac"/>
+      </g>
   </g>
 
   <!-- Bottom Legend Bar -->
